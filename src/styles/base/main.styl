@@ -1,0 +1,211 @@
+// 品耀數位行銷 - 基礎樣式
+// 使用品耀品牌色彩：#2c3e50, #34495e
+
+// 基礎變數
+$primary-color = #9D7543
+$secondary-color = #173241
+$accent-color = #D5AF73
+$text-color = #1E1E1E 
+$background-light = #EDEDED
+$border-color = #ecf0f1
+$error-color = #e74c3c
+$success-color = #27ae60
+$gredient-color = linear-gradient(135deg, $accent-color,$primary-color)
+
+// 基礎重置
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+// 基礎字體
+body
+  font-family 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif
+  line-height 1.6
+  color $text-color
+
+// 通用按鈕樣式
+.btn
+  display inline-block
+  padding 0.75rem 1.5rem
+  border none
+  border-radius 8px
+  font-size 1rem
+  font-weight 600
+  text-decoration none
+  text-align center
+  cursor pointer
+  transition all 0.3s ease
+  
+  &.btn-primary
+    background $gredient-color
+    color white
+    
+    &:hover
+      transform translateY(-2px)
+      box-shadow 0 4px 12px rgba($primary-color, 0.3)
+
+// 通用容器樣式
+.container
+  max-width 1200px
+  margin 0 auto
+  padding 0 1rem
+
+// 通用卡片樣式
+.card
+  background white
+  border-radius 12px
+  box-shadow 0 4px 20px rgba(0, 0, 0, 0.1)
+  padding 2rem
+  margin-bottom 1.5rem
+
+// 通用表單樣式
+.form-group
+  margin-bottom 1.5rem
+  text-align left 
+  
+  label
+    display block
+    margin-bottom 0.5rem
+    color $text-color
+    font-weight 500
+    
+  input, textarea, select
+    width 100%
+    padding 0.75rem
+    border 2px solid $border-color
+    border-radius 8px
+    font-size 1rem
+    transition border-color 0.3s ease
+    
+    &::placeholder
+      color #999
+      opacity 0.7
+    
+    &:focus
+      outline none
+      border-color $primary-color
+
+// 通用工具類
+.text-center
+  text-align center
+
+.text-left
+  text-align left
+
+.text-right
+  text-align right
+
+.mb-1
+  margin-bottom 0.5rem
+
+.mb-2
+  margin-bottom 1rem
+
+.mb-3
+  margin-bottom 1.5rem
+
+.mt-1
+  margin-top 0.5rem
+
+.mt-2
+  margin-top 1rem
+
+.mt-3
+  margin-top 1.5rem
+
+// 登入頁面樣式
+body
+  background $gredient-color
+  min-height 100vh
+  display flex
+  align-items center
+  justify-content center
+
+.login-container
+  background white
+  padding 3rem
+  border-radius 20px
+  box-shadow 0 20px 40px rgba(0, 0, 0, 0.2)
+  width 100%
+  max-width 450px
+  text-align center
+
+.company-logo
+  width 80px
+  height 80px
+  background $gredient-color
+  border-radius 50%
+  margin 0 auto 1.5rem
+  display flex
+  align-items center
+  justify-content center
+  padding 15px
+  box-sizing border-box
+  
+  img
+    width 100%
+    height 100%
+    object-fit contain
+
+.company-name
+  color $secondary-color
+  font-size 2rem
+  font-weight 600
+  margin-bottom 0.5rem
+
+.subtitle
+  color #7f8c8d
+  margin-bottom 1rem
+  font-size 0.9rem
+
+.login-btn
+  width 100%
+  padding 1rem
+  background $gredient-color
+  color white
+  border none
+  border-radius 10px
+  font-size 1rem
+  font-weight 600
+  cursor pointer
+  transition transform 0.2s ease
+  
+  &:hover
+    transform translateY(-2px)
+
+.error-message
+  color $error-color
+  margin-top 1rem
+  font-size 0.9rem
+  display none
+
+.case-info 
+  padding 1rem
+  border-radius 8px
+  margin-bottom .5rem
+  font-size 0.9rem
+  color #666
+
+.footer
+  margin-top 2rem
+  padding-top 1rem
+  border-top 1px solid $border-color
+  color #95a5a6
+  font-size 0.8rem
+
+.demo-credentials
+  background #e8f4f8
+  padding 1rem
+  border-radius 8px
+  margin-top 1rem
+  font-size 0.8rem
+  color $primary-color
+
+// 響應式設計
+@media (max-width: 768px)
+  .container
+    padding 0 0.5rem
+    
+  .card
+    padding 1.5rem

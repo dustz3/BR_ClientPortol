@@ -1,4 +1,0 @@
-# Netlify redirects for PPT Preview project
-
-# All routes go to main index.html
-/* /index.html 200

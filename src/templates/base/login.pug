@@ -1,0 +1,93 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 客戶專屬登入 - 品耀數位行銷
+    link(rel="stylesheet" href="css/base/main.css")
+
+block content
+  .login-container
+    .company-logo
+      img(src="images/base/logo.svg" alt="品耀數位行銷 LOGO")
+    h1.company-name 品耀數位行銷
+    p.subtitle 客戶專屬報告查看系統
+    
+    .case-info
+      strong 請輸入您的登入資訊
+      br
+      | 我們將為您提供專屬的 SEO 健檢報告
+    
+    form#clientLoginForm
+      .form-group
+        label(for="clientAccount") 客戶名稱
+        input(type="text" id="clientAccount" name="clientAccount" placeholder="Account Name" required)
+      
+      .form-group
+        label(for="caseNumber") 專案案號
+        input(type="text" id="caseNumber" name="caseNumber" placeholder="Project Number" required)
+      
+      button(type="submit").login-btn 查看報告
+      
+      .error-message#errorMessage
+        | 帳號或案號錯誤，請重新輸入
+     
+    
+    .footer
+      p © 2025 品耀數位行銷 - 讓品牌發光，價值躍升
+
+block scripts
+  script.
+    // 客戶資料庫
+    const clientDatabase = {
+      'kaiwei': {
+        'br08pj007': {
+          name: '凱崴數位',
+          project: '網站健檢報告',
+          reportUrl: 'index.html',
+          status: 'completed'
+        }
+      }
+    };
+    
+    document.getElementById('clientLoginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const clientAccount = document.getElementById('clientAccount').value.toLowerCase().trim();
+      const caseNumber = document.getElementById('caseNumber').value.toLowerCase().trim();
+      
+      // 驗證客戶資料
+      if (clientDatabase[clientAccount] && clientDatabase[clientAccount][caseNumber]) {
+        const clientData = clientDatabase[clientAccount][caseNumber];
+        
+        // 儲存客戶資訊到 session
+        sessionStorage.setItem('clientAccount', clientAccount);
+        sessionStorage.setItem('caseNumber', caseNumber);
+        sessionStorage.setItem('clientName', clientData.name);
+        sessionStorage.setItem('projectName', clientData.project);
+        sessionStorage.setItem('isClientLoggedIn', 'true');
+        
+        // 重定向到 SEO 報告頁面
+        window.location.href = `index.html`;
+      } else {
+        // 顯示錯誤訊息
+        document.getElementById('errorMessage').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('errorMessage').style.display = 'none';
+        }, 3000);
+      }
+    });
+    
+    // 檢查是否已經登入 - 只在頁面載入時檢查一次
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLoggedIn = sessionStorage.getItem('isClientLoggedIn') === 'true';
+      const clientAccount = sessionStorage.getItem('clientAccount');
+      const caseNumber = sessionStorage.getItem('caseNumber');
+      
+      console.log('登入頁面檢查:', { isLoggedIn, clientAccount, caseNumber });
+      
+      if (isLoggedIn && clientAccount === 'kaiwei' && caseNumber === 'br08pj007') {
+        console.log('已登入，跳轉到報告頁面');
+        window.location.href = `index.html`;
+      }
+    });
