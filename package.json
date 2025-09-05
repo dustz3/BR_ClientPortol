@@ -1,0 +1,42 @@
+{
+  "name": "client-preview-presentation",
+  "version": "1.0.0",
+  "description": "客戶預覽專用的線上簡報系統",
+  "main": "src/js/main.js",
+  "scripts": {
+    "dev": "npx http-server public -p 3000 -o",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "npx stylus src/styles/main.styl -o dist/css/",
+    "build:js": "npx browserify src/js/main.js -o dist/js/bundle.js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "watch:css": "npx stylus -w src/styles/main.styl -o dist/css/",
+    "watch:js": "npx watchify src/js/main.js -o dist/js/bundle.js -v",
+    "deploy": "npm run build && npx gh-pages -d dist",
+    "build:kai-wei": "npm run build:kai-wei:pug && npm run build:kai-wei:css",
+    "build:kai-wei:pug": "npx pug src/templates/projects/kai-wei-tw/index.pug -o dist/projects/kai-wei-tw/",
+    "build:kai-wei:css": "npx stylus src/styles/projects/kai-wei-tw/main.styl -o dist/css/projects/kai-wei-tw/",
+    "watch:kai-wei": "npm run watch:kai-wei:pug & npm run watch:kai-wei:css",
+    "watch:kai-wei:pug": "npx pug -w src/templates/projects/kai-wei-tw/index.pug -o dist/projects/kai-wei-tw/",
+    "watch:kai-wei:css": "npx stylus -w src/styles/projects/kai-wei-tw/main.styl -o dist/css/projects/kai-wei-tw/",
+    "preview:kai-wei": "npx http-server dist/projects/kai-wei-tw -p 3001 -o",
+    "dev:kai-wei": "npm run build:kai-wei && npm run preview:kai-wei"
+  },
+  "keywords": [
+    "presentation",
+    "client-preview",
+    "seo",
+    "web"
+  ],
+  "author": "Aries Hsieh",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "gh-pages": "^6.0.0",
+    "http-server": "^14.1.1",
+    "stylus": "^0.63.0",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "reveal.js": "^4.3.1"
+  }
+}

@@ -1,0 +1,170 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title kai-wei.tw 專案簡報
+    meta(name="description" content="kai-wei.tw 專案展示簡報")
+    meta(name="keywords" content="kai-wei.tw,專案,簡報,展示")
+    
+    //- Reveal.js CSS
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css")
+    //- 垂直滾動主題
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css" id="theme")
+    
+    //- 專案樣式
+    link(rel="stylesheet" href="../../css/projects/kai-wei-tw/main.css")
+  
+  body
+    .presentation-container
+      //- 第1頁：封面
+      .slide(data-background-color="#2c3e50")
+        h1 凱崴數位網站健檢報告
+        h3 針對首頁的 SEO 與速度進行完整檢查
+        .report-info
+          p.date 2025 年 9 月
+          p.provider 提供者：品耀數位行銷
+      
+      //- 第2頁：檢測工具與說明
+      .slide
+        h2 檢測工具與說明
+        .tool-info
+          .tool-item
+            h3 🔧 使用工具
+            p Google Lighthouse（PageSpeed Insights）
+          .tool-item
+            h3 📅 檢測時間
+            p 2025/09/05
+          .tool-item
+            h3 🌐 檢測頁面
+            p 凱崴數位首頁（https://kai-wei.tw）
+          .tool-item
+            h3 🎯 檢測目的
+            p 了解網站載入速度、SEO 健全度與最佳實踐狀況
+      
+      //- 第3頁：整體表現摘要
+      .slide
+        h2 整體表現摘要
+        .performance-summary
+          .device-scores
+            .device-item
+              h3 📱 手機版分數
+              .scores
+                .score Performance: 95
+                .score SEO: 92
+                .score Best Practices: 100
+                .score Accessibility: 93
+            .device-item
+              h3 💻 桌機版分數
+              .scores
+                .score Performance: 93
+                .score SEO: 92
+                .score Best Practices: 100
+                .score Accessibility: 90
+          .overall-evaluation
+            h3 🏆 整體評價
+            p 網站表現優良、結構清晰、安全性高
+      
+      //- 第4頁：手機版詳細數據
+      .slide
+        h2 手機版詳細數據
+        .mobile-metrics
+          .metric-item
+            h3 ⚡ FCP (First Contentful Paint)
+            .value 1.1 秒
+          .metric-item
+            h3 🎯 LCP (Largest Contentful Paint)
+            .value 1.7 秒
+          .metric-item
+            h3 ⏱️ Total Blocking Time
+            .value 180ms
+          .metric-item
+            h3 📊 Speed Index
+            .value 4.0 秒
+        .optimization-suggestions
+          h3 💡 優化建議
+          ul
+            li 壓縮圖片
+            li 使用 Lazy Load
+            li 考慮 CDN
+      
+      //- 第5頁：桌機版詳細數據
+      .slide
+        h2 桌機版詳細數據
+        .desktop-metrics
+          .metric-item
+            h3 ⚡ FCP (First Contentful Paint)
+            .value 0.3 秒
+          .metric-item
+            h3 🎯 LCP (Largest Contentful Paint)
+            .value 0.7 秒
+          .metric-item
+            h3 ⏱️ Total Blocking Time
+            .value 0ms
+          .metric-item
+            h3 📊 Speed Index
+            .value 0.6 秒
+          .metric-item
+            h3 📐 CLS (Cumulative Layout Shift)
+            .value 0.163
+            .note （排版略有位移）
+      
+      //- 第6頁：SEO 評估摘要
+      .slide
+        h2 SEO 評估摘要
+        .seo-evaluation
+          .seo-score
+            h3 🔍 SEO 分數
+            .score-value 92 分
+          .seo-strengths
+            h3 ✅ 優勢
+            ul
+              li Meta 標籤完整
+              li 網站結構清晰
+          .seo-improvements
+            h3 📈 可強化項目
+            ol
+              li 補齊所有圖片的 ALT 文字
+              li 確保每頁都有明確的 meta description
+              li 加入 sitemap.xml 與 robots.txt（可用 Yoast plugin 自動產生）
+      
+      //- 第7頁：總結與建議
+      .slide
+        h2 總結與建議
+        .conclusion-content
+          .main-conclusion
+            h3 🎯 主要結論
+            p 網站目前表現非常良好，已具備推廣條件
+          .recommendations
+            h3 💡 建議事項
+            ul
+              li 建議持續監測 SEO 關鍵字表現
+              li 可考慮補上網站 Footer 與更多 CTA 內容
+              li 增加轉換率與可讀性
+          .next-steps
+            h3 🚀 後續行動
+            p 可開始進行 SEO 關鍵字優化與內容行銷策略
+      
+      //- 第8頁：聯絡資訊
+      .slide(data-background-color="#34495e")
+        h2 聯絡我們
+        .contact-info
+          p
+            strong 📧 Email: 
+            | contact@pinyao-digital.com
+          p
+            strong 📞 Phone: 
+            | +886-xxx-xxx-xxx
+          p
+            strong 🌐 Website: 
+            | www.pinyao-digital.com
+        .thank-you
+          p
+            small 感謝您的觀看！
+          p
+            small 品耀數位行銷 - 專業 SEO 與網站優化服務
+    
+    //- Reveal.js JavaScript
+    script(src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js")
+    script(src="../../js/main.js")
