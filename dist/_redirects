@@ -1,0 +1,10 @@
+# Netlify redirects for PPT Preview project
+
+# Redirect root to kai-wei-tw project
+/ /projects/kai-wei-tw/
+
+# Handle all routes for kai-wei-tw project
+/projects/kai-wei-tw/* /projects/kai-wei-tw/index.html 200
+
+# Fallback for any other routes
+/* /projects/kai-wei-tw/index.html 200
