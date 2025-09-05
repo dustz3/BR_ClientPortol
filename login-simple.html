@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客戶登入 - 品耀數位行銷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .login-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .company-name {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #2c3e50;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .demo-credentials {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #2c3e50;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ecf0f1;
+            color: #95a5a6;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="company-logo">🔐</div>
+        <h1 class="company-name">品耀數位行銷</h1>
+        <p class="subtitle">客戶專屬報告查看系統</p>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="clientAccount">客戶帳號</label>
+                <input type="text" id="clientAccount" name="clientAccount" placeholder="請輸入您的客戶帳號" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="caseNumber">案號</label>
+                <input type="text" id="caseNumber" name="caseNumber" placeholder="請輸入您的案號" required>
+            </div>
+            
+            <button type="submit" class="login-btn">查看報告</button>
+            
+            <div class="error-message" id="errorMessage">
+                帳號或案號錯誤，請重新輸入
+            </div>
+        </form>
+        
+        <div class="demo-credentials">
+            <strong>🔍 登入資訊：</strong><br>
+            客戶帳號：kaiwei<br>
+            案號：br08pj007
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 品耀數位行銷 - 專業 SEO 服務</p>
+        </div>
+    </div>
+
+    <script>
+        // 簡單的登入驗證
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const clientAccount = document.getElementById('clientAccount').value.toLowerCase().trim();
+            const caseNumber = document.getElementById('caseNumber').value.toLowerCase().trim();
+            
+            // 驗證登入資訊
+            if (clientAccount === 'kaiwei' && caseNumber === 'br08pj007') {
+                // 儲存登入狀態
+                sessionStorage.setItem('isClientLoggedIn', 'true');
+                sessionStorage.setItem('clientAccount', 'kaiwei');
+                sessionStorage.setItem('caseNumber', 'br08pj007');
+                sessionStorage.setItem('clientName', '凱崴數位');
+                sessionStorage.setItem('projectName', '網站健檢報告');
+                
+                // 直接跳轉到報告頁面
+                window.location.href = 'index.html';
+            } else {
+                // 顯示錯誤訊息
+                document.getElementById('errorMessage').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('errorMessage').style.display = 'none';
+                }, 3000);
+            }
+        });
+        
+        // 檢查是否已經登入
+        if (sessionStorage.getItem('isClientLoggedIn') === 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
