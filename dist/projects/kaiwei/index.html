@@ -1,416 +1,190 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>凱崴數位網站健檢報告 - 品耀數位行銷</title>
-    <link rel="stylesheet" href="../../css/projects/kaiwei/main.css">
-</head>
-<body>
-    <!-- 登出按鈕 -->
-    <div class="logout-container">
-        <button onclick="logout()" class="logout-btn">登出</button>
-    </div>
-    
-    <div class="presentation-container">
-        <!-- 第1頁：封面 -->
-        <div class="slide" data-background-color="#2c3e50">
-            <h1>凱崴數位網站健檢報告</h1>
-            <h3>針對首頁的 SEO 與速度進行完整檢查</h3>
-            <div class="report-info">
-                <p class="date">2025 年 9 月</p>
-                <p class="provider">提供者：品耀數位行銷</p>
-            </div>
-        </div>
-        
-        <!-- 第2頁：檢測工具與說明 -->
-        <div class="slide">
-            <h2>檢測工具與說明</h2>
-            <div class="tool-info">
-                <div class="tool-item">
-                    <h3>🔧 使用工具</h3>
-                    <p>Google Lighthouse（PageSpeed Insights）</p>
-                </div>
-                <div class="tool-item">
-                    <h3>📅 檢測時間</h3>
-                    <p>2025/09/05</p>
-                </div>
-                <div class="tool-item">
-                    <h3>🌐 檢測頁面</h3>
-                    <p>凱崴數位首頁（https://kai-wei.tw）</p>
-                </div>
-                <div class="tool-item">
-                    <h3>🎯 檢測目的</h3>
-                    <p>了解網站載入速度、SEO 健全度與最佳實踐狀況</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第3頁：整體表現摘要 -->
-        <div class="slide">
-            <h2>整體表現摘要</h2>
-            <div class="performance-summary">
-                <div class="device-scores">
-                    <div class="device-item">
-                        <h3>📱 手機版分數</h3>
-                        <div class="scores">
-                            <div class="score">Performance: 95</div>
-                            <div class="score">SEO: 92</div>
-                            <div class="score">Best Practices: 100</div>
-                            <div class="score">Accessibility: 93</div>
-                        </div>
-                    </div>
-                    <div class="device-item">
-                        <h3>💻 桌機版分數</h3>
-                        <div class="scores">
-                            <div class="score">Performance: 93</div>
-                            <div class="score">SEO: 92</div>
-                            <div class="score">Best Practices: 100</div>
-                            <div class="score">Accessibility: 90</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="overall-evaluation">
-                    <h3>🏆 整體評價</h3>
-                    <p>網站表現優良、結構清晰、安全性高</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第4頁：手機版詳細數據 -->
-        <div class="slide">
-            <h2>手機版詳細數據</h2>
-            <div class="mobile-metrics">
-                <div class="metric-item">
-                    <h3>⚡ FCP (First Contentful Paint)</h3>
-                    <div class="value">1.1 秒</div>
-                </div>
-                <div class="metric-item">
-                    <h3>🎯 LCP (Largest Contentful Paint)</h3>
-                    <div class="value">1.7 秒</div>
-                </div>
-                <div class="metric-item">
-                    <h3>⏱️ Total Blocking Time</h3>
-                    <div class="value">180ms</div>
-                </div>
-                <div class="metric-item">
-                    <h3>📊 Speed Index</h3>
-                    <div class="value">4.0 秒</div>
-                </div>
-            </div>
-            <div class="optimization-suggestions">
-                <h3>💡 優化建議</h3>
-                <ul>
-                    <li>壓縮圖片</li>
-                    <li>使用 Lazy Load</li>
-                    <li>考慮 CDN</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- 第5頁：桌機版詳細數據 -->
-        <div class="slide">
-            <h2>桌機版詳細數據</h2>
-            <div class="desktop-metrics">
-                <div class="metric-item">
-                    <h3>⚡ FCP (First Contentful Paint)</h3>
-                    <div class="value">0.3 秒</div>
-                </div>
-                <div class="metric-item">
-                    <h3>🎯 LCP (Largest Contentful Paint)</h3>
-                    <div class="value">0.7 秒</div>
-                </div>
-                <div class="metric-item">
-                    <h3>⏱️ Total Blocking Time</h3>
-                    <div class="value">0ms</div>
-                </div>
-                <div class="metric-item">
-                    <h3>📊 Speed Index</h3>
-                    <div class="value">0.6 秒</div>
-                </div>
-                <div class="metric-item">
-                    <h3>📐 CLS (Cumulative Layout Shift)</h3>
-                    <div class="value">0.163</div>
-                    <div class="note">（排版略有位移）</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第6頁：SEO 評估摘要 -->
-        <div class="slide">
-            <h2>SEO 評估摘要</h2>
-            <div class="seo-evaluation">
-                <div class="seo-score">
-                    <h3>🔍 SEO 分數</h3>
-                    <div class="score-value">92 分</div>
-                </div>
-                <div class="seo-strengths">
-                    <h3>✅ 優勢</h3>
-                    <ul>
-                        <li>Meta 標籤完整</li>
-                        <li>網站結構清晰</li>
-                    </ul>
-                </div>
-                <div class="seo-improvements">
-                    <h3>📈 可強化項目</h3>
-                    <ol>
-                        <li>補齊所有圖片的 ALT 文字</li>
-                        <li>確保每頁都有明確的 meta description</li>
-                        <li>加入 sitemap.xml 與 robots.txt（可用 Yoast plugin 自動產生）</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第7頁：總結與建議 -->
-        <div class="slide">
-            <h2>總結與建議</h2>
-            <div class="conclusion-content">
-                <div class="main-conclusion">
-                    <h3>🎯 主要結論</h3>
-                    <p>網站目前表現非常良好，已具備推廣條件</p>
-                </div>
-                <div class="recommendations">
-                    <h3>💡 建議事項</h3>
-                    <ul>
-                        <li>建議持續監測 SEO 關鍵字表現</li>
-                        <li>可考慮補上網站 Footer 與更多 CTA 內容</li>
-                        <li>增加轉換率與可讀性</li>
-                    </ul>
-                </div>
-                <div class="next-steps">
-                    <h3>🚀 後續行動</h3>
-                    <p>可開始進行 SEO 關鍵字優化與內容行銷策略</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第8頁：聯絡資訊 -->
-        <div class="slide" data-background-color="#34495e">
-            <h2>聯絡我們</h2>
-            <div class="contact-info">
-                <p><strong>📧 Email: </strong>contact@pinyao-digital.com</p>
-                <p><strong>📞 Phone: </strong>+886-xxx-xxx-xxx</p>
-                <p><strong>🌐 Website: </strong>www.pinyao-digital.com</p>
-            </div>
-            <div class="thank-you">
-                <p><small>感謝您的觀看！</small></p>
-                <p><small>品耀數位行銷 - 專業 SEO 與網站優化服務</small></p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-    </div>
-    
-    <div class="slide-navigation" id="slideNavigation"></div>
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>凱崴數位網站健檢報告 - 品耀數位行銷</title><link rel="stylesheet" href="../../css/projects/kaiwei/main.css"></head><body><!-- 登出按鈕--><div class="logout-container"><button class="logout-btn" onclick="logout()">登出</button></div><div class="presentation-container"><!-- 第1頁：空白投影片--><div class="slide"><h1>空白投影片</h1><p>開始您的簡報內容</p></div></div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div><div class="slide-navigation" id="slideNavigation"></div></body><script>// 登出功能
+function logout() {
+  sessionStorage.clear();
+  window.location.href = '../../login.html';
+}
 
-    <script>
-        // 簡單的認證檢查
-        function checkAuth() {
-            const isLoggedIn = sessionStorage.getItem('isClientLoggedIn') === 'true';
-            if (!isLoggedIn) {
-                window.location.href = '../../login.html';
-                return false;
-            }
-            return true;
+// 垂直滾動簡報系統
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+  let isScrolling = false;
+  let scrollTimeout;
+  
+  // 設定初始狀態
+  slides.forEach((slide, index) => {
+    slide.style.transform = `translateY(${index * 100}vh)`;
+    slide.style.zIndex = slides.length - index;
+  });
+  
+  // 顯示第一張投影片
+  showSlide(0);
+  
+  // 監聽滾輪事件
+  document.addEventListener('wheel', function(event) {
+    if (isScrolling) return;
+    
+    isScrolling = true;
+    clearTimeout(scrollTimeout);
+    
+    // 防止預設滾動行為
+    event.preventDefault();
+    
+    if (event.deltaY > 0) {
+      // 向下滾動 - 下一張
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    } else {
+      // 向上滾動 - 上一張
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+    
+    // 重置滾動狀態
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+    }, 600);
+  }, { passive: false });
+  
+  // 監聽觸控事件
+  let startY = 0;
+  let startX = 0;
+  
+  document.addEventListener('touchstart', function(event) {
+    startY = event.touches[0].clientY;
+    startX = event.touches[0].clientX;
+  }, { passive: true });
+  
+  document.addEventListener('touchend', function(event) {
+    if (isScrolling) return;
+    
+    const endY = event.changedTouches[0].clientY;
+    const endX = event.changedTouches[0].clientX;
+    const diffY = startY - endY;
+    const diffX = startX - endX;
+    
+    // 判斷是垂直滑動還是水平滑動
+    if (Math.abs(diffY) > Math.abs(diffX)) {
+      isScrolling = true;
+      
+      if (diffY > 50) {
+        // 向上滑動 - 下一張
+        if (currentSlide < slides.length - 1) {
+          currentSlide++;
+          showSlide(currentSlide);
         }
-
-        // 登出功能
-        function logout() {
-            sessionStorage.clear();
-            window.location.href = '../../login.html';
+      } else if (diffY < -50) {
+        // 向下滑動 - 上一張
+        if (currentSlide > 0) {
+          currentSlide--;
+          showSlide(currentSlide);
         }
-        
-        // 垂直滾動簡報系統
-        document.addEventListener('DOMContentLoaded', function() {
-            // 首先檢查認證
-            if (!checkAuth()) {
-                return;
-            }
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-            let isScrolling = false;
-            let scrollTimeout;
-            
-            // 設定初始狀態
-            slides.forEach((slide, index) => {
-                slide.style.transform = `translateY(${index * 100}vh)`;
-                slide.style.zIndex = slides.length - index;
-            });
-            
-            // 顯示第一張投影片
-            showSlide(0);
-            
-            // 監聽滾輪事件
-            document.addEventListener('wheel', function(event) {
-                if (isScrolling) return;
-                
-                isScrolling = true;
-                clearTimeout(scrollTimeout);
-                
-                // 防止預設滾動行為
-                event.preventDefault();
-                
-                if (event.deltaY > 0) {
-                    // 向下滾動 - 下一張
-                    if (currentSlide < slides.length - 1) {
-                        currentSlide++;
-                        showSlide(currentSlide);
-                    }
-                } else {
-                    // 向上滾動 - 上一張
-                    if (currentSlide > 0) {
-                        currentSlide--;
-                        showSlide(currentSlide);
-                    }
-                }
-                
-                // 重置滾動狀態
-                scrollTimeout = setTimeout(() => {
-                    isScrolling = false;
-                }, 600);
-            }, { passive: false });
-            
-            // 監聽觸控事件
-            let startY = 0;
-            let startX = 0;
-            
-            document.addEventListener('touchstart', function(event) {
-                startY = event.touches[0].clientY;
-                startX = event.touches[0].clientX;
-            }, { passive: true });
-            
-            document.addEventListener('touchend', function(event) {
-                if (isScrolling) return;
-                
-                const endY = event.changedTouches[0].clientY;
-                const endX = event.changedTouches[0].clientX;
-                const diffY = startY - endY;
-                const diffX = startX - endX;
-                
-                // 判斷是垂直滑動還是水平滑動
-                if (Math.abs(diffY) > Math.abs(diffX)) {
-                    isScrolling = true;
-                    
-                    if (diffY > 50) {
-                        // 向上滑動 - 下一張
-                        if (currentSlide < slides.length - 1) {
-                            currentSlide++;
-                            showSlide(currentSlide);
-                        }
-                    } else if (diffY < -50) {
-                        // 向下滑動 - 上一張
-                        if (currentSlide > 0) {
-                            currentSlide--;
-                            showSlide(currentSlide);
-                        }
-                    }
-                    
-                    // 重置滾動狀態
-                    setTimeout(() => {
-                        isScrolling = false;
-                    }, 600);
-                }
-            }, { passive: true });
-            
-            // 監聽鍵盤事件
-            document.addEventListener('keydown', function(event) {
-                switch(event.key) {
-                    case 'ArrowDown':
-                    case ' ':
-                        event.preventDefault();
-                        if (currentSlide < slides.length - 1) {
-                            currentSlide++;
-                            showSlide(currentSlide);
-                        }
-                        break;
-                    case 'ArrowUp':
-                        event.preventDefault();
-                        if (currentSlide > 0) {
-                            currentSlide--;
-                            showSlide(currentSlide);
-                        }
-                        break;
-                    case 'Home':
-                        event.preventDefault();
-                        showSlide(0);
-                        break;
-                    case 'End':
-                        event.preventDefault();
-                        showSlide(slides.length - 1);
-                        break;
-                }
-            });
-            
-            // 顯示指定投影片
-            function showSlide(index) {
-                currentSlide = Math.max(0, Math.min(index, slides.length - 1));
-                
-                slides.forEach((slide, i) => {
-                    const offset = (i - currentSlide) * 100;
-                    slide.style.transform = `translateY(${offset}vh)`;
-                });
-                
-                // 更新進度指示器
-                updateProgress();
-                updateNavigation();
-            }
-            
-            // 更新進度指示器
-            function updateProgress() {
-                const progress = ((currentSlide + 1) / slides.length) * 100;
-                const progressFill = document.getElementById('progressFill');
-                progressFill.style.width = `${progress}%`;
-            }
-            
-            // 創建導航指示器
-            function createNavigation() {
-                const nav = document.getElementById('slideNavigation');
-                
-                slides.forEach((_, index) => {
-                    const dot = document.createElement('div');
-                    dot.className = 'nav-dot';
-                    if (index === currentSlide) {
-                        dot.classList.add('active');
-                    }
-                    
-                    dot.addEventListener('click', () => {
-                        showSlide(index);
-                    });
-                    
-                    nav.appendChild(dot);
-                });
-            }
-            
-            // 更新導航點
-            function updateNavigation() {
-                const dots = document.querySelectorAll('.nav-dot');
-                dots.forEach((dot, index) => {
-                    if (index === currentSlide) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-            }
-            
-            // 初始化導航
-            createNavigation();
-            
-            // 防止頁面滾動
-            document.body.style.overflow = 'hidden';
-            
-            // 響應式處理
-            window.addEventListener('resize', function() {
-                // 重新計算投影片位置
-                slides.forEach((slide, i) => {
-                    const offset = (i - currentSlide) * 100;
-                    slide.style.transform = `translateY(${offset}vh)`;
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+      }
+      
+      // 重置滾動狀態
+      setTimeout(() => {
+        isScrolling = false;
+      }, 600);
+    }
+  }, { passive: true });
+  
+  // 監聽鍵盤事件
+  document.addEventListener('keydown', function(event) {
+    switch(event.key) {
+      case 'ArrowDown':
+      case ' ':
+        event.preventDefault();
+        if (currentSlide < slides.length - 1) {
+          currentSlide++;
+          showSlide(currentSlide);
+        }
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        if (currentSlide > 0) {
+          currentSlide--;
+          showSlide(currentSlide);
+        }
+        break;
+      case 'Home':
+        event.preventDefault();
+        showSlide(0);
+        break;
+      case 'End':
+        event.preventDefault();
+        showSlide(slides.length - 1);
+        break;
+    }
+  });
+  
+  // 顯示指定投影片
+  function showSlide(index) {
+    currentSlide = Math.max(0, Math.min(index, slides.length - 1));
+    
+    slides.forEach((slide, i) => {
+      const offset = (i - currentSlide) * 100;
+      slide.style.transform = `translateY(${offset}vh)`;
+    });
+    
+    // 更新進度指示器
+    updateProgress();
+    updateNavigation();
+  }
+  
+  // 更新進度指示器
+  function updateProgress() {
+    const progress = ((currentSlide + 1) / slides.length) * 100;
+    const progressFill = document.getElementById('progressFill');
+    progressFill.style.width = `${progress}%`;
+  }
+  
+  // 創建導航指示器
+  function createNavigation() {
+    const nav = document.getElementById('slideNavigation');
+    
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.className = 'nav-dot';
+      if (index === currentSlide) {
+        dot.classList.add('active');
+      }
+      
+      dot.addEventListener('click', () => {
+        showSlide(index);
+      });
+      
+      nav.appendChild(dot);
+    });
+  }
+  
+  // 更新導航點
+  function updateNavigation() {
+    const dots = document.querySelectorAll('.nav-dot');
+    dots.forEach((dot, index) => {
+      if (index === currentSlide) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+  
+  // 初始化導航
+  createNavigation();
+  
+  // 防止頁面滾動
+  document.body.style.overflow = 'hidden';
+  
+  // 響應式處理
+  window.addEventListener('resize', function() {
+    // 重新計算投影片位置
+    slides.forEach((slide, i) => {
+      const offset = (i - currentSlide) * 100;
+      slide.style.transform = `translateY(${offset}vh)`;
+    });
+  });
+});</script></html>
