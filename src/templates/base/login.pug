@@ -8,33 +8,42 @@ html(lang="zh-TW")
 
 block content
   .login-container
-    .company-logo
-      img(src="images/base/logo.svg" alt="品耀數位行銷 LOGO")
-    h1.company-name 品耀數位行銷
-    p.subtitle 客戶專屬報告查看系統
+    // 左半部分 - 裝飾區域
+    .login-left
+      .left-content
+        h2 歡迎使用
+        p 品耀數位行銷
+        p 專業 SEO 與網站優化服務
+        p Live View 測試 - 自動編譯成功！
     
-    .case-info
-      strong 請輸入您的登入資訊
-      br
-      | 我們將為您提供專屬的 SEO 健檢報告
-    
-    form#clientLoginForm
-      .form-group
-        label(for="clientAccount") 客戶名稱
-        input(type="text" id="clientAccount" name="clientAccount" placeholder="Account Name" required)
+    // 右半部分 - 登入表單區域
+    .login-right
+      .company-header
+        .company-logo
+          img(src="images/base/logo.svg" alt="品耀數位行銷 LOGO")
+        .company-info
+          h1.company-name 品耀數位行銷
+          p.company-slogan 讓品牌發光，價值躍升
+      .case-info
+        strong 請輸入您的登入資訊 
       
-      .form-group
-        label(for="caseNumber") 專案案號
-        input(type="text" id="caseNumber" name="caseNumber" placeholder="Project Number" required)
+      form#clientLoginForm
+        .form-group
+          label(for="clientAccount") 客戶名稱
+          input(type="text" id="clientAccount" name="clientAccount" placeholder="Account Name" required)
+        
+        .form-group
+          label(for="caseNumber") 專案案號
+          input(type="text" id="caseNumber" name="caseNumber" placeholder="Project Number" required)
+        
+        button(type="submit").login-btn 查看報告
+        
+        .error-message#errorMessage
+          | 帳號或案號錯誤，請重新輸入
+       
       
-      button(type="submit").login-btn 查看報告
-      
-      .error-message#errorMessage
-        | 帳號或案號錯誤，請重新輸入
-     
-    
-    .footer
-      p © 2025 品耀數位行銷 - 讓品牌發光，價值躍升
+      .footer
+        p © 2025 品耀數位行銷
 
 block scripts
   script.

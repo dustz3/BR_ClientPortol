@@ -1,0 +1,113 @@
+// 空白樣式文件 - 開始您的設計吧！
+
+// 基礎變數
+$primary-color = #9D7543
+$secondary-color = #173241
+$accent-color = #D5AF73
+$text-color = #1E1E1E 
+$background-light = #EDEDED
+$border-color = #ecf0f1
+$error-color = #e74c3c
+$success-color = #27ae60
+$gredient-color = linear-gradient(135deg, $accent-color,$primary-color)
+
+// 基礎重置
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+// 基礎字體
+body
+  font-family 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif
+  line-height 1.6
+  color #fff
+  background #1e1e1e
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  height 100vh
+
+// 容器
+.container
+  display flex
+
+  width 800px
+  height 500px
+  margin 0 auto 
+  background-color #fff
+  border-radius 1rem
+  overflow hidden
+  .left-content
+    width 60%
+    height 100%
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    
+    img
+      width 100%
+      height 100%
+      object-fit cover
+      object-position center
+      transform scaleX(-1)  // 水平翻轉
+  .right-content
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 40%
+    height 100%
+    .company-header
+      display flex 
+      align-items center 
+      margin 0 auto
+      .company-logo
+        display flex
+        justify-content center
+        align-items center
+        width 65px
+        height 65px 
+        border-radius 5rem
+        background $gredient-color
+        img
+          width 75%
+          height 75%
+      .company-info
+        display flex 
+        flex-direction column
+        padding 0 .5rem 0
+        h1.company-name
+          font-size 1.8rem
+          line-height 30px  
+          color $secondary-color
+          border-radius 5rem 
+          margin 0
+          padding 0
+        p
+          font-size 1rem 
+          color #666
+          margin 0
+          padding 0 
+
+// Footer 樣式
+.footer
+  text-align center
+  padding 1rem  
+  
+  p
+    margin 0
+    color #6c757d
+    font-size 0.9rem
+
+// 引入組件樣式
+@import '../components/form.styl'
+
+// 測試樣式 - 確認自動編譯
+.container .right-content p
+  color $primary-color
+  font-weight bold
+  margin-top 1rem
+
