@@ -20,7 +20,8 @@
     "watch:kai-wei": "npm run watch:kai-wei:pug & npm run watch:kai-wei:css",
     "watch:kai-wei:pug": "npx pug -w src/templates/projects/kaiwei/index.pug -o dist/projects/kaiwei/",
     "watch:kai-wei:css": "npx stylus -w src/styles/projects/kaiwei/main.styl -o dist/css/projects/kaiwei/",
-    "preview:kai-wei": "npx http-server dist/projects/kaiwei -p 3001 -o",
+    "preview:kai-wei": "npm run build:kai-wei && npx http-server dist/projects/kaiwei -p 3001 -o",
+    "preview:slide": "npm run build:kai-wei && npx http-server dist/projects/kaiwei -p 3002 -o slide.html",
     "dev:kai-wei": "npm run build:kai-wei && npm run preview:kai-wei"
   },
   "keywords": [
