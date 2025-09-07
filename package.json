@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx http-server public -p 3000 -o",
     "build": "npm run build:static",
-    "build:static": "mkdir -p dist && cp dist/_redirects dist/ || true",
+    "build:static": "npm run build:base && cp dist/_redirects dist/ || true",
+    "build:base": "npx pug src/templates/base/index.pug -o dist/",
     "build:css": "npx stylus src/styles/main.styl -o dist/css/",
     "build:js": "npx browserify src/js/main.js -o dist/js/bundle.js",
     "watch": "npm run watch:css & npm run watch:js",
