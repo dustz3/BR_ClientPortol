@@ -1,11 +1,39 @@
 //- 表單組件
 .form-container
-  form.login-form
+  form.login-form#loginForm
     .form-group
-      label(for="username") 專案名稱
-      input#username(type="text" name="username" placeholder="請輸入您的專案名稱")
+      label(for="username") 客戶名稱
+      input#username(type="text" name="username" placeholder="請輸入您的客戶名稱" required)
     .form-group
       label(for="password") 案號
-      input#password(type="text" name="password" placeholder="請輸入你的案號")
+      input#password(type="text" name="password" placeholder="請輸入你的案號" required)
     .form-actions
-      button.btn-login(type="submit") 登入 
+      button.btn-login(type="submit") 登入
+    .error-message#errorMessage(style="display: none; color: red; margin-top: 10px; text-align: center;")
+
+script.
+  document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const errorMessage = document.getElementById('errorMessage');
+        
+        // 清除之前的錯誤訊息
+        errorMessage.style.display = 'none';
+        
+        // 驗證專案名稱和案號
+        if (username === 'kaiwei' && password === 'br08pj00725c08') {
+          // 登入成功，重定向到 kaiwei 專案頁面
+          window.location.href = 'projects/kaiwei/index.html';
+        } else {
+          // 登入失敗，顯示錯誤訊息
+          errorMessage.textContent = '專案名稱或案號錯誤，請重新輸入';
+          errorMessage.style.display = 'block';
+        }
+      });
+    }
+  }); 
