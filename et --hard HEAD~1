@@ -1,5 +1,0 @@
-[33mc43d89a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m 重新命名所有 kai-wei-tw 資料夾為 kaiwei，並更新相關路徑
-[33mcb06c42[m Simplify Netlify deployment: Use static HTML
-[33m5aade3e[m Fix Netlify build: Regenerate package-lock.json and update dist files
-[33m1e2f225[m Fix Netlify build: Add pug dependency
-[33ma34e3f1[m Add Netlify deployment configuration
