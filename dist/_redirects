@@ -1,0 +1,10 @@
+# Netlify redirects for PPT Preview project
+
+# Root redirects to login page
+/ /index.html 200
+
+# Kaiwei project routes
+/projects/kaiwei/* /projects/kaiwei/index.html 200
+
+# Fallback for any other routes
+/* /index.html 200
