@@ -66,6 +66,22 @@ html, body
   justify-content center
   align-items center
 
+// 圖片顯示控制
+.mobile-image
+  display none
+
+.desktop-image
+  display block
+
+@media (max-width: 768px)
+  .mobile-image
+    display block
+    width 100%
+    margin 1rem 0
+    
+  .desktop-image
+    display none
+
 .website-screenshot
   width 100%
   max-width 400px
@@ -75,12 +91,24 @@ html, body
     height auto
     border-radius 12px
 
-.content-title h2
-  font-weight normal
+.content-title
+  // margin-bottom 1rem
 
-.content-title h3
-  font-weight normal
-  color #2A4A63
+.content-sub
+  margin-top 1rem
+  margin-bottom 1rem
+  
+  h2
+    font-size 1.2rem
+    font-weight normal
+
+.content-info
+  margin-bottom 1rem
+  
+  h3
+    font-size .9rem
+    font-weight normal
+    color #2A4A63
 
 .company-name
   color kaiwei-teal
@@ -150,8 +178,7 @@ html, body
     .content-title
       display flex
       flex-direction column 
-      width 100%
-      margin-bottom 2rem
+      width 100% 
       
       h1
         font-size 3.5rem 
@@ -243,24 +270,9 @@ html, body
           flex 1 1 100%
           width 90%
           max-width 90%
-          display flex
-          flex-direction column
-          
-          .content-title
-            order 1
-            
-            h1
-              order 1
-              
-            h2
-              order 3
-              
-            h3
-              order 4
           
         .content-right
           flex 1 1 100%
-          order 2
           width 100%
           max-width 100%
           
