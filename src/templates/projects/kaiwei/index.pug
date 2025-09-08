@@ -4,17 +4,154 @@ html(lang="zh-TW")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title 凱崴數位網站健檢報告 - 品耀數位行銷
-    link(rel="stylesheet" href="../../css/projects/kaiwei/main.css")
+    link(rel="stylesheet" href="../../css/projects/kaiwei/slide.css")
   body
     // 登出按鈕
     .logout-container
       button(onclick="logout()").logout-btn 登出
     
+    // 頁面指示器
+    .slide-indicator#slideIndicator
+    
     .presentation-container
-      // 第1頁：空白投影片
+      // 封面頁
       .slide
-        h1 空白投影片
-        p 開始您的簡報內容
+        .slide-content
+          .content-body.layout-cover
+            .content-left
+              .content-title
+                h1 凱崴數位網站 SEO 健檢報告
+                br
+                h2 網站名稱｜<span class="company-name">凱崴數位有限公司（kai-wei.tw）</span>
+                h2 檢查時間｜2025 年 9 月 5 日
+                h2 檢查範圍｜標題、描述、結構、速度、圖片、連結等基礎狀況
+                h2 檢查目的｜協助提升搜尋能見度、改善基礎架構與使用者體驗，作為後續優化依據
+                br
+                h3 報告整理：品耀數位行銷（Brandrize）
+            .content-right
+              .website-screenshot
+                img(src="/images/projects/kaiwei/seo-for-kaiwei.png" alt="凱崴數位網站截圖")
+      
+      // 第1頁：整體總覽
+      .slide
+        .slide-content
+          .content-title
+            h1 整體總覽
+          
+          .content-body.layout-full
+            .full-width-content
+              table.report-table
+                thead
+                  tr
+                    th 指標
+                    th 評估結果
+                    th 評分說明
+                tbody
+                  tr
+                    td 手機版 PageSpeed
+                    td 95 / 100
+                    td 極佳，載入快速、阻塞少
+                  tr
+                    td 桌機版 PageSpeed
+                    td 93 / 100
+                    td 優異，整體效能佳
+                  tr
+                    td SEO 標準符合度
+                    td 約 85%
+                    td 可再優化標題、描述與語意標記
+                  tr
+                    td 圖片優化程度
+                    td 中等
+                    td 缺少 ALT、命名通用且缺關鍵字
+                  tr
+                    td 結構化內容支援
+                    td 不足
+                    td 缺乏明確 Schema 標記 (如 Organization、LocalBusiness)
+                  tr
+                    td 網站內容品質
+                    td 較薄弱
+                    td 文字量少，缺乏長尾關鍵字與 FAQ 結構
+                  tr
+                    td 內外部連結健康度
+                    td 基礎可用
+                    td 沒有明顯錯誤，但缺少內鏈與導引 CTA
+                  tr
+                    td Sitemap/Robots.txt
+                    td 無
+                    td 建議補足以利搜尋引擎收錄
+
+      // 第2頁：建議對策
+      .slide
+        .slide-content
+          .content-title
+            h1 標題與描述分析（Meta Tags）
+          
+          .content-body.layout-full
+            .full-width-content
+              h2 目前狀況
+              ul
+                li 多數頁面標題未結合品牌名（如首頁、關於我們）
+                li Meta Description 雖有填寫，但偏短且無關鍵字導向
+              h2 問題：
+              ul
+                li 標題無強調主服務（無「整合式金流」、「網站架設」、「管理系統」等字樣）
+                li 無一致性的品牌露出
+              h2 建議對策
+              table.report-table
+                thead
+                  tr
+                    th 頁面
+                    th 建議 Title
+                    th 建議 Meta Description
+                tbody
+                  tr
+                    td 首頁
+                    td 凱崴數位 | 網站架設・金流整合・管理系統開發專家
+                    td 凱崴數位提供專為服務業打造的預約管理解決方案，整合 LINE、訂單、金流與客戶管理，適用寵物店、美業、健身房與瑜珈教室，協助中小型業者提升營運效率。
+                  tr
+                    td 關於我們
+                    td 關於凱崴數位 | 整合式數位解決方案供應商
+                    td 凱崴專注於網站建置與系統開發，致力成為企業信賴的數位轉型夥伴
+                  tr
+                    td 服務項目
+                    td 凱崴服務 | 網站開發、API金流串接與管理系統
+                    td 涵蓋金流整合、後台管理、API 串接等數位解決方案，提供量身定制開發服務
+
+      // 第3頁：內容結構與語意標記
+      .slide
+        .slide-content
+          .content-title
+            h1 內容結構與語意標記（H1~H3）
+          
+          .content-body.layout-full
+            .full-width-content
+              h2 目前狀況
+              ul
+                li 多數頁面標題未結合品牌名（如首頁、關於我們）
+                li Meta Description 雖有填寫，但偏短且無關鍵字導向
+              h2 問題：
+              ul
+                li 標題無強調主服務（無「整合式金流」、「網站架設」、「管理系統」等字樣）
+                li 無一致性的品牌露出
+              table.report-table
+                thead
+                  tr
+                    th 頁面
+                    th 建議 H1
+                    th 建議 H2/H3
+                tbody
+                  tr
+                    td 首頁
+                    td 凱崴數位 | 網站架設・金流整合・管理系統開發專家
+                    td 專業服務項目：網站開發、金流串接、管理系統
+                  tr
+                    td 關於我們
+                    td 關於凱崴數位 | 整合式數位解決方案供應商
+                    td 我們的專業團隊：技術實力、服務經驗、客戶見證
+                  tr
+                    td 服務項目
+                    td 凱崴服務 | 網站開發、API金流串接與管理系統
+                    td 核心服務內容：網站建置、金流整合、系統開發
       
     
     .progress-bar
@@ -38,8 +175,13 @@ html(lang="zh-TW")
       
       // 設定初始狀態
       slides.forEach((slide, index) => {
-        slide.style.transform = `translateY(${index * 100}vh)`;
-        slide.style.zIndex = slides.length - index;
+        if (index === 0) {
+          slide.style.opacity = '1';
+          slide.style.zIndex = '1';
+        } else {
+          slide.style.opacity = '0';
+          slide.style.zIndex = '0';
+        }
       });
       
       // 顯示第一張投影片
@@ -69,10 +211,10 @@ html(lang="zh-TW")
           }
         }
         
-        // 重置滾動狀態
+        // 重置滾動狀態 - 增加延遲時間防止連續滾動
         scrollTimeout = setTimeout(() => {
           isScrolling = false;
-        }, 600);
+        }, 1000);
       }, { passive: false });
       
       // 監聽觸控事件
@@ -110,10 +252,10 @@ html(lang="zh-TW")
             }
           }
           
-          // 重置滾動狀態
+          // 重置滾動狀態 - 增加延遲時間防止連續滑動
           setTimeout(() => {
             isScrolling = false;
-          }, 600);
+          }, 1000);
         }
       }, { passive: true });
       
@@ -151,13 +293,19 @@ html(lang="zh-TW")
         currentSlide = Math.max(0, Math.min(index, slides.length - 1));
         
         slides.forEach((slide, i) => {
-          const offset = (i - currentSlide) * 100;
-          slide.style.transform = `translateY(${offset}vh)`;
+          if (i === currentSlide) {
+            slide.style.opacity = '1';
+            slide.style.zIndex = '1';
+          } else {
+            slide.style.opacity = '0';
+            slide.style.zIndex = '0';
+          }
         });
         
         // 更新進度指示器
         updateProgress();
         updateNavigation();
+        updateSlideIndicator();
       }
       
       // 更新進度指示器
@@ -186,6 +334,25 @@ html(lang="zh-TW")
         });
       }
       
+      // 創建頁面指示器
+      function createSlideIndicator() {
+        const indicator = document.getElementById('slideIndicator');
+        
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.className = 'indicator-dot';
+          if (index === currentSlide) {
+            dot.classList.add('active');
+          }
+          
+          dot.addEventListener('click', () => {
+            showSlide(index);
+          });
+          
+          indicator.appendChild(dot);
+        });
+      }
+      
       // 更新導航點
       function updateNavigation() {
         const dots = document.querySelectorAll('.nav-dot');
@@ -198,18 +365,27 @@ html(lang="zh-TW")
         });
       }
       
+      // 更新頁面指示器
+      function updateSlideIndicator() {
+        const indicatorDots = document.querySelectorAll('.indicator-dot');
+        indicatorDots.forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+      
       // 初始化導航
       createNavigation();
+      createSlideIndicator();
       
       // 防止頁面滾動
       document.body.style.overflow = 'hidden';
       
       // 響應式處理
       window.addEventListener('resize', function() {
-        // 重新計算投影片位置
-        slides.forEach((slide, i) => {
-          const offset = (i - currentSlide) * 100;
-          slide.style.transform = `translateY(${offset}vh)`;
-        });
+        // 投影片位置由 CSS 處理，不需要重新計算
       });
     });

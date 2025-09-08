@@ -3,7 +3,7 @@ html(lang="zh-TW")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title 建議對策 - 品耀數位行銷
+    title 內容結構與語意標記 - 品耀數位行銷
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
@@ -13,37 +13,34 @@ html(lang="zh-TW")
       .slide
         .slide-content
           .content-title
-            h1 標題與描述分析（Meta Tags）
+            h1 內容結構與語意標記（H1~H3）
+          
           .content-body.layout-full
             .full-width-content
-              h2 目前狀況
+              h2 檢查重點：
               ul
-                li 多數頁面標題未結合品牌名（如首頁、關於我們）
-                li Meta Description 雖有填寫，但偏短且無關鍵字導向
-              h2 問題：
-              ul
-                li 標題無強調主服務（無「整合式金流」、「網站架設」、「管理系統」等字樣）
-                li 無一致性的品牌露出
-              h2 建議對策
+                li 有使用 H1~H3 標籤，但階層未明確、部分頁面重複 H1
+                li H2/H3 未結合服務關鍵字
+              h2 改善建議：
               table.report-table
                 thead
                   tr
                     th 頁面
-                    th 建議 Title
-                    th 建議 Meta Description
+                    th 建議 H1
+                    th 建議 H2/H3
                 tbody
                   tr
                     td 首頁
-                    td 凱崴數位｜雲端預約管理與LINE整合專家，打造智慧商務後台
-                    td 凱崴數位提供專為服務業打造的預約管理解決方案，整合 LINE、訂單、金流與客戶管理，適用寵物店、美業、健身房與瑜珈教室，協助中小型業者提升營運效率。
+                    td 凱崴數位雲端預約系統｜LINE 整合收款管理平台
+                    td 最強雲端管理系統 / 介面完整易操作，操作簡單,官網＋Line即時預約,多種金流付款方式最便利...
                   tr
                     td 關於我們
-                    td 關於凱崴數位｜預約管理與LINE整合專家，打造智慧商務後台
-                    td 凱崴數位專注開發預約管理與顧客經營系統，整合LINE官方帳號串接、銷售分析與多元模組，幫助業主輕鬆管理門市營運大小事。
+                    td 關於凱崴數位｜專注預約管理與雲端系統開發
+                    td 凱崴數位的服務理念 / 01 專業、02 服務、03 熱忱
                   tr
                     td 服務項目
-                    td 凱崴數位｜多元產業預約管理系統，專為寵物、美業、健身與瑜珈打造
-                    td 凱崴數位提供寵物店、美業、健身房與瑜珈教室等多產業預約管理系統，整合 LINE 串接、金流、排班與顧客資料，提升營運效率與顧客體驗。
+                    td 最為您著想的電商平台，提供多業種服務
+                    td 寵物店管理系統 / 功能亮點
 
   script.
     // 佈局切換功能
@@ -64,11 +61,11 @@ html(lang="zh-TW")
           if (splitLayout.style.display === 'flex') {
             splitLayout.style.display = 'none';
             fullLayout.style.display = 'flex';
-            title.textContent = '建議對策';
+            title.textContent = '內容結構與語意標記（H1~H3）';
           } else {
             splitLayout.style.display = 'flex';
             fullLayout.style.display = 'none';
-            title.textContent = '建議對策';
+            title.textContent = '內容結構與語意標記（H1~H3）';
           }
         });
       }
