@@ -95,10 +95,9 @@ html, body
   // margin-bottom 1rem
 
 .slide-title
-  font-size 1.5rem !important
+  font-size 3.5rem
   font-weight 700
-  color #fff !important
-  padding .75rem 1.5rem !important
+  color #010101
   margin 0
   text-align left
 
@@ -370,14 +369,17 @@ html, body
     text-align center
     
   th:first-child
-    width 20%
-    max-width 20%
+    width 30%
+    max-width 30%
     
   th:nth-child(2)
-    width 25%
+    width 20%
+    
+  th:nth-child(3)
+    width 20%
     
   th:last-child
-    width 55%
+    width 30%
 
   tbody tr:nth-child(even)
     background-color #f8f9fa
@@ -388,19 +390,25 @@ html, body
   td:first-child
     font-weight 500
     color kaiwei-navy
-    width 20%
-    max-width 20%
+    width 30%
+    max-width 30%
     text-align left
 
   td:nth-child(2)
     font-weight 600
     color kaiwei-teal
-    width 25%
+    width 20%
+    text-align left
+
+  td:nth-child(3)
+    font-weight 600
+    color kaiwei-teal
+    width 20%
     text-align left
 
   td:last-child
     color kaiwei-navy
-    width 55%
+    width 30%
     line-height 1.3
     text-align left
 
@@ -443,6 +451,61 @@ html, body
   
   &::before
     content "H2/H3:"
+    margin-right 0.5rem
+    font-size 0.9em
+    opacity 0.7
+    display none
+
+// mobile-value 樣式
+.mobile-value
+  position relative
+  
+  &::before
+    content "手機:"
+    margin-right 0.5rem
+    font-size 0.9em
+    opacity 0.7
+    display none
+
+// desktop-value 樣式
+.desktop-value
+  position relative
+  
+  &::before
+    content "桌機:"
+    margin-right 0.5rem
+    font-size 0.9em
+    opacity 0.7
+    display none
+
+// recommendation-text 樣式
+.recommendation-text
+  position relative
+  
+  &::before
+    content "建議:"
+    margin-right 0.5rem
+    font-size 0.9em
+    opacity 0.7
+    display none
+
+// status-text 樣式
+.status-text
+  position relative
+  
+  &::before
+    content "狀態:"
+    margin-right 0.5rem
+    font-size 0.9em
+    opacity 0.7
+    display none
+
+// suggestion-text 樣式
+.suggestion-text
+  position relative
+  
+  &::before
+    content "建議與做法:"
     margin-right 0.5rem
     font-size 0.9em
     opacity 0.7
@@ -559,6 +622,12 @@ html, body
     text-align center
     font-size 1.5rem
 
+  // 手機版 slide-title 樣式
+  .slide-title
+    color #fff !important
+    font-size 1.5rem !important
+    padding .75rem 1.5rem !important
+
   .content-title h2
     font-size 1.2rem
 
@@ -660,6 +729,15 @@ html, body
         width auto
         border none
         
+      &:nth-child(3)
+        font-size 1rem
+        font-weight 600
+        color kaiwei-teal
+        margin-bottom 0
+        background none
+        width auto
+        border none
+        
       &:last-child
         font-size 0.9rem
         color kaiwei-navy
@@ -687,7 +765,12 @@ html, body
   .title-text::before,
   .description-text::before,
   .h1-text::before,
-  .h2h3-text::before
+  .h2h3-text::before,
+  .mobile-value::before,
+  .desktop-value::before,
+  .recommendation-text::before,
+  .status-text::before,
+  .suggestion-text::before
     display inline
 
   // 手機版移除 hover 效果

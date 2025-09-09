@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>圖片與媒體最佳化 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/projects/kaiwei/slide.css"></head><body><div class="presentation-container"> <div class="slide"><div class="slide-content"><div class="content-title"><h1 class="slide-title">圖片與媒體最佳化</h1></div><div class="content-body layout-full"><div class="full-width-content"><h2>目前狀況</h2><ul><li>多數圖片尺寸合理</li><li>缺少 ALT 說明</li><li>檔名通用(如:IMG1234.jpg),未結合服務關鍵字</li></ul><h2>改善建議</h2><ul><li>為所有圖像加上有意義的ALT描述,例如:「API金流串接流程示意圖」</li><li>圖片重新命名為語意清楚且包含品牌與關鍵字,如kaiwei-payment-gateway.png</li><li>對首頁 Hero 圖、服務圖示等設定 lazy load</li></ul></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 預設顯示全寬佈局
+  const splitLayout = document.querySelector('.layout-split');
+  const fullLayout = document.querySelector('.layout-full');
+  
+  if (splitLayout) splitLayout.style.display = 'none';
+  if (fullLayout) fullLayout.style.display = 'flex';
+  
+  // 添加切換按鈕
+  const title = document.querySelector('.content-title h1');
+  if (title) {
+    title.style.cursor = 'pointer';
+    title.title = '點擊切換佈局';
+    title.addEventListener('click', function() {
+      if (splitLayout.style.display === 'flex') {
+        splitLayout.style.display = 'none';
+        fullLayout.style.display = 'flex';
+        title.textContent = '圖片與媒體最佳化';
+      } else {
+        splitLayout.style.display = 'flex';
+        fullLayout.style.display = 'none';
+        title.textContent = '圖片與媒體最佳化';
+      }
+    });
+  }
+});</script></html>
