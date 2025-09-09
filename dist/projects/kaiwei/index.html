@@ -219,8 +219,19 @@ document.addEventListener('DOMContentLoaded', function() {
   createNavigation();
   createSlideIndicator();
   
-  // 防止頁面滾動
-  document.body.style.overflow = 'hidden';
+  // 響應式滾動處理
+  function handleResponsiveScroll() {
+    if (window.innerWidth <= 768) {
+      // 手機版：啟用滾動
+      document.body.style.overflow = 'auto';
+    } else {
+      // 桌面版：禁用滾動
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  
+  // 初始化滾動設定
+  handleResponsiveScroll();
   
   // 響應式處理
   window.addEventListener('resize', function() {
