@@ -37,6 +37,7 @@
     "gh-pages": "^6.0.0",
     "http-server": "^14.1.1",
     "pug": "^3.0.3",
+    "puppeteer": "^24.19.0",
     "stylus": "^0.63.0",
     "watchify": "^4.0.0"
   },

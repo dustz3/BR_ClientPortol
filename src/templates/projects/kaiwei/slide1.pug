@@ -79,28 +79,30 @@ html(lang="zh-TW")
   script.
     // 佈局切換功能
     document.addEventListener('DOMContentLoaded', function() {
-      // 預設顯示全寬佈局
-      const splitLayout = document.querySelector('.layout-split');
-      const fullLayout = document.querySelector('.layout-full');
-      
-      if (splitLayout) splitLayout.style.display = 'none';
-      if (fullLayout) fullLayout.style.display = 'flex';
-      
-      // 添加切換按鈕
-      const title = document.querySelector('.content-title h1');
-      if (title) {
-        title.style.cursor = 'pointer';
-        title.title = '點擊切換佈局';
-        title.addEventListener('click', function() {
-          if (splitLayout.style.display === 'flex') {
-            splitLayout.style.display = 'none';
-            fullLayout.style.display = 'flex';
-            title.textContent = '整體總覽';
-          } else {
-            splitLayout.style.display = 'flex';
-            fullLayout.style.display = 'none';
-            title.textContent = '整體總覽';
-          }
-        });
+      // 只在桌面版啟用佈局切換
+      if (window.innerWidth > 768) {
+        const splitLayout = document.querySelector('.layout-split');
+        const fullLayout = document.querySelector('.layout-full');
+        
+        if (splitLayout) splitLayout.style.display = 'none';
+        if (fullLayout) fullLayout.style.display = 'flex';
+        
+        // 添加切換按鈕
+        const title = document.querySelector('.content-title h1');
+        if (title) {
+          title.style.cursor = 'pointer';
+          title.title = '點擊切換佈局';
+          title.addEventListener('click', function() {
+            if (splitLayout.style.display === 'flex') {
+              splitLayout.style.display = 'none';
+              fullLayout.style.display = 'flex';
+              title.textContent = '整體總覽';
+            } else {
+              splitLayout.style.display = 'flex';
+              fullLayout.style.display = 'none';
+              title.textContent = '整體總覽';
+            }
+          });
+        }
       }
     });

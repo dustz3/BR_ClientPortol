@@ -298,3 +298,99 @@ body {
     font-size: 0.8rem;
   }
 }
+.table-demo-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+.table-title {
+  text-align: center;
+  color: #9d7543;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.seo-geo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  margin: 2rem 0;
+}
+.seo-geo-table thead {
+  background: linear-gradient(135deg, #d5af73, #9d7543);
+}
+.seo-geo-table thead th {
+  color: #fff;
+  font-weight: 600;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.seo-geo-table thead th:first-child {
+  background: rgba(255,255,255,0.15);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.seo-geo-table tbody tr {
+  border-bottom: 1px solid rgba(157,117,67,0.1);
+  transition: background-color 0.3s ease;
+}
+.seo-geo-table tbody tr:hover {
+  background-color: rgba(213,175,115,0.08);
+}
+.seo-geo-table tbody tr:last-child {
+  border-bottom: none;
+}
+.seo-geo-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+}
+.seo-geo-table tbody td:first-child {
+  background-color: rgba(213,175,115,0.1);
+  font-weight: 600;
+  color: #9d7543;
+  width: 20%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.seo-geo-table tbody td:nth-child(2) {
+  color: #1e1e1e;
+  width: 40%;
+  border-right: 1px solid rgba(157,117,67,0.2);
+  text-align: left;
+}
+.seo-geo-table tbody td:last-child {
+  color: #1e1e1e;
+  width: 40%;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .table-demo-container {
+    padding: 1rem;
+  }
+  .table-title {
+    font-size: 2rem;
+  }
+  .seo-geo-table {
+    font-size: 0.8rem;
+  }
+  .seo-geo-table thead th {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .seo-geo-table tbody td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}

@@ -311,3 +311,101 @@ body
           
         .company-slogan
           font-size 0.8rem
+
+// 表格樣式
+.table-demo-container
+  max-width 1000px
+  margin 2rem auto
+  padding 2rem
+
+.table-title
+  text-align center
+  color $primary-color
+  font-size 2.5rem
+  font-weight 700
+  margin-bottom 2rem
+  text-shadow 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.seo-geo-table
+  width 100%
+  border-collapse collapse
+  font-size 1rem
+  background-color #fff
+  border-radius 12px
+  overflow hidden
+  box-shadow 0 8px 24px rgba(0, 0, 0, 0.15)
+  margin 2rem 0
+
+  thead
+    background $gredient-color
+    
+    th
+      color white
+      font-weight 600
+      padding 1.2rem 1rem
+      text-align center
+      font-size 1.1rem
+      border none
+      text-shadow 0 1px 2px rgba(0, 0, 0, 0.2)
+      
+      &:first-child
+        background rgba(255, 255, 255, 0.15)
+        font-weight 700
+        font-size 1.2rem
+
+  tbody
+    tr
+      border-bottom 1px solid rgba($primary-color, 0.1)
+      transition background-color 0.3s ease
+      
+      &:hover
+        background-color rgba($accent-color, 0.08)
+      
+      &:last-child
+        border-bottom none
+
+    td
+      padding 1rem
+      vertical-align middle
+      line-height 1.6
+      word-wrap break-word
+      white-space normal
+      text-align left
+      
+      &:first-child
+        background-color rgba($accent-color, 0.1)
+        font-weight 600
+        color $primary-color
+        width 20%
+        text-align center
+        font-size 1.1rem
+      
+      &:nth-child(2)
+        color $text-color
+        width 40%
+        border-right 1px solid rgba($primary-color, 0.2)
+        text-align left
+        
+      &:last-child
+        color $text-color
+        width 40%
+        text-align left
+
+// 響應式表格樣式
+@media (max-width: 768px)
+  .table-demo-container
+    padding 1rem
+    
+  .table-title
+    font-size 2rem
+    
+  .seo-geo-table
+    font-size 0.8rem
+    
+    thead th
+      padding 0.8rem 0.5rem
+      font-size 0.9rem
+      
+    tbody td
+      padding 0.8rem 0.5rem
+      font-size 0.85rem
