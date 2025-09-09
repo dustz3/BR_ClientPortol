@@ -81,6 +81,14 @@ body {
   height: auto;
   border-radius: 12px;
 }
+.slide-title {
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  color: #fff !important;
+  padding: 0.75rem 1.5rem !important;
+  margin: 0;
+  text-align: left;
+}
 .content-sub {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -555,7 +563,6 @@ body {
   }
   .layout-cover .content-title h1 {
     font-size: 2rem;
-    padding: 1rem;
     color: #000;
     background: transparent;
     width: auto;
