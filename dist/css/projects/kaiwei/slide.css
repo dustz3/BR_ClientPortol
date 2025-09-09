@@ -384,6 +384,7 @@ body {
   margin-right: 0.5rem;
   font-size: 0.9em;
   opacity: 0.7;
+  display: none;
 }
 .description-text {
   position: relative;
@@ -393,6 +394,7 @@ body {
   margin-right: 0.5rem;
   font-size: 0.9em;
   opacity: 0.7;
+  display: none;
 }
 .h1-text {
   position: relative;
@@ -402,6 +404,7 @@ body {
   margin-right: 0.5rem;
   font-size: 0.9em;
   opacity: 0.7;
+  display: none;
 }
 .h2h3-text {
   position: relative;
@@ -411,6 +414,7 @@ body {
   margin-right: 0.5rem;
   font-size: 0.9em;
   opacity: 0.7;
+  display: none;
 }
 .seo-geo-table {
   width: 100%;
@@ -641,5 +645,17 @@ body {
   }
   .slide-indicator {
     display: none;
+  }
+  .title-text::before,
+  .description-text::before,
+  .h1-text::before,
+  .h2h3-text::before {
+    display: inline;
+  }
+  .report-table tbody tr:hover {
+    background-color: transparent !important;
+  }
+  .seo-geo-table tbody tr:hover {
+    background-color: transparent !important;
   }
 }
