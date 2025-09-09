@@ -222,11 +222,32 @@ document.addEventListener('DOMContentLoaded', function() {
   // 響應式滾動處理
   function handleResponsiveScroll() {
     if (window.innerWidth <= 768) {
-      // 手機版：啟用滾動
+      // 手機版：啟用滾動，顯示所有內容
       document.body.style.overflow = 'auto';
+      document.body.style.position = 'static';
+      document.body.style.left = 'auto';
+      document.body.style.right = 'auto';
+      document.querySelector('.presentation-container').style.height = 'auto';
+      document.querySelector('.presentation-container').style.flexDirection = 'column';
+      
+      // 顯示所有投影片，移除淡入淡出效果
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach(slide => {
+        slide.style.display = 'block';
+        slide.style.position = 'relative';
+        slide.style.transform = 'none';
+        slide.style.opacity = '1';
+        slide.style.visibility = 'visible';
+        slide.style.height = 'auto';
+        slide.style.minHeight = '100vh';
+        slide.style.left = 'auto';
+        slide.style.right = 'auto';
+      });
     } else {
-      // 桌面版：禁用滾動
+      // 桌面版：禁用滾動，使用淡入淡出效果
       document.body.style.overflow = 'hidden';
+      document.querySelector('.presentation-container').style.height = '100vh';
+      document.querySelector('.presentation-container').style.flexDirection = 'row';
     }
   }
   
