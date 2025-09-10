@@ -798,4 +798,20 @@ body {
   .seo-geo-table tbody tr:hover {
     background-color: transparent !important;
   }
+  .speed-analysis-table td:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .report-table td:nth-child(2) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .report-table td:nth-child(3) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .report-table td:nth-child(4) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
