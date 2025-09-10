@@ -298,19 +298,6 @@ body {
     font-size: 0.8rem;
   }
 }
-.table-demo-container {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-}
-.table-title {
-  text-align: center;
-  color: #9d7543;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 .seo-geo-table {
   width: 100%;
   border-collapse: collapse;
@@ -376,12 +363,6 @@ body {
   text-align: left;
 }
 @media (max-width: 768px) {
-  .table-demo-container {
-    padding: 1rem;
-  }
-  .table-title {
-    font-size: 2rem;
-  }
   .seo-geo-table {
     font-size: 0.8rem;
   }

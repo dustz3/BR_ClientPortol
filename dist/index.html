@@ -14,7 +14,7 @@
         // 如果載入失敗，使用預設資料
         clients = {
           'kaiwei': {
-            password: 'br08pj00725c08',
+            password: 'br08pj00625c08',
             projectPath: 'projects/kaiwei/index.html',
             displayName: '凱崴數位'
           }
@@ -24,16 +24,16 @@
     loginForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value.trim();
+      const username = document.getElementById('username').value.trim().toLowerCase();
+      const password = document.getElementById('password').value.trim().toLowerCase();
       const errorMessage = document.getElementById('errorMessage');
       
       // 清除之前的錯誤訊息
       errorMessage.style.display = 'none';
       
-      // 驗證客戶資料
+      // 驗證客戶資料（大小寫不敏感）
       const client = clients[username];
-      if (client && client.password === password) {
+      if (client && client.password.toLowerCase() === password) {
         // 登入成功，重定向到對應專案頁面
         window.location.href = client.projectPath;
       } else {
@@ -43,4 +43,4 @@
       }
     });
   }
-}); </script></div></div><div class="footer"><p>© 2025 品耀數位行銷</p><p class="small-text" style="font-size: 12px; color: #666; margin-top: 5px;">內部預覽系統 - 請勿外流</p></div></body>
+}); </script></div></div><div class="footer"><p>© 2025 品耀數位行銷</p><p class="small-text" style="font-size: 12px; color: #666; margin-top: 5px;"> </p></div></body>

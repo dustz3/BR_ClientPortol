@@ -28,7 +28,7 @@ script.
           // 如果載入失敗，使用預設資料
           clients = {
             'kaiwei': {
-              password: 'br08pj00725c08',
+              password: 'br08pj00625c08',
               projectPath: 'projects/kaiwei/index.html',
               displayName: '凱崴數位'
             }
@@ -38,16 +38,16 @@ script.
       loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const username = document.getElementById('username').value.trim();
-        const password = document.getElementById('password').value.trim();
+        const username = document.getElementById('username').value.trim().toLowerCase();
+        const password = document.getElementById('password').value.trim().toLowerCase();
         const errorMessage = document.getElementById('errorMessage');
         
         // 清除之前的錯誤訊息
         errorMessage.style.display = 'none';
         
-        // 驗證客戶資料
+        // 驗證客戶資料（大小寫不敏感）
         const client = clients[username];
-        if (client && client.password === password) {
+        if (client && client.password.toLowerCase() === password) {
           // 登入成功，重定向到對應專案頁面
           window.location.href = client.projectPath;
         } else {
