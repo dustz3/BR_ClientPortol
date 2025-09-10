@@ -30,6 +30,17 @@ body {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logout-container .logout-btn .logout-text {
+  display: inline;
+}
+.logout-container .logout-btn .logout-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
 }
 .logout-container .logout-btn:hover {
   background-color: #188c78;
@@ -762,6 +773,24 @@ body {
   .status-text::before,
   .suggestion-text::before {
     display: inline;
+  }
+  .logout-container {
+    top: 1rem;
+    right: 1rem;
+  }
+  .logout-container .logout-btn {
+    padding: 0.6rem 0.6rem 0.6rem 1rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+  .logout-container .logout-btn .logout-text {
+    display: none;
+  }
+  .logout-container .logout-btn .logout-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
   }
   .report-table tbody tr:hover {
     background-color: transparent !important;
