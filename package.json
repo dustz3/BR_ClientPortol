@@ -1,7 +1,7 @@
 {
-  "name": "client-preview-presentation",
+  "name": "client-portal",
   "version": "1.0.0",
-  "description": "客戶預覽專用的線上簡報系統",
+  "description": "客戶報告管理入口平台 - 提供客戶登入查看專案報告",
   "main": "src/js/main.js",
   "scripts": {
     "dev": "npx http-server public -p 3000 -o",
@@ -25,9 +25,11 @@
     "dev:kai-wei": "npm run build:kai-wei && npm run preview:kai-wei"
   },
   "keywords": [
-    "presentation",
-    "client-preview",
+    "client-portal",
+    "reports",
+    "dashboard",
     "seo",
+    "analytics",
     "web"
   ],
   "author": "Aries Hsieh",
