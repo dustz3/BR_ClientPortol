@@ -1,29 +1,112 @@
-<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>單一投影片 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/projects/kaiwei/slide.css"></head><body><div class="presentation-container"> <div class="slide"><div class="slide-content"><div class="content-title"><h1>整體總覽</h1></div><!-- 選項 1: 70%/30% 佈局--><!-- 選項 2: 100% 全寬表格佈局--><div class="content-body layout-full"><div class="full-width-content"><h2>凱崴數位官方網站健檢報告</h2><table class="report-table"><thead><tr><th>指標</th><th>評估結果</th><th>評分說明</th></tr></thead><tbody><tr><td>手機版 PageSpeed</td><td>95 / 100</td><td>極佳，載入快速、阻塞少</td></tr><tr><td>桌機版 PageSpeed</td><td>93 / 100</td><td>優異，整體效能佳</td></tr><tr><td>SEO 標準符合度</td><td>約 85%</td><td>可再優化標題、描述與語意標記</td></tr><tr><td>圖片優化程度</td><td>中等</td><td>缺少 ALT、命名通用且缺關鍵字</td></tr><tr><td>結構化內容支援</td><td>不足</td><td>缺乏明確 Schema 標記 (如 Organization、LocalBusiness)</td></tr><tr><td>網站內容品質</td><td>較薄弱</td><td>文字量少，缺乏長尾關鍵字與 FAQ 結構</td></tr><tr><td>內外部連結健康度</td><td>基礎可用</td><td>沒有明顯錯誤，但缺少內鏈與導引 CTA</td></tr><tr><td>Sitemap/Robots.txt</td><td>無</td><td>建議補足以利搜尋引擎收錄</td></tr></tbody></table></div></div></div></div></div></body><script>// 佈局切換功能
-document.addEventListener('DOMContentLoaded', function() {
-  // 只在桌面版啟用佈局切換
-  if (window.innerWidth > 768) {
-    const splitLayout = document.querySelector('.layout-split');
-    const fullLayout = document.querySelector('.layout-full');
-    
-    if (splitLayout) splitLayout.style.display = 'none';
-    if (fullLayout) fullLayout.style.display = 'flex';
-    
-    // 添加切換按鈕
-    const title = document.querySelector('.content-title h1');
-    if (title) {
-      title.style.cursor = 'pointer';
-      title.title = '點擊切換佈局';
-      title.addEventListener('click', function() {
-        if (splitLayout.style.display === 'flex') {
-          splitLayout.style.display = 'none';
-          fullLayout.style.display = 'flex';
-          title.textContent = '整體總覽';
-        } else {
-          splitLayout.style.display = 'flex';
-          fullLayout.style.display = 'none';
-          title.textContent = '整體總覽';
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單一投影片 - 品耀數位行銷</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/projects/kaiwei/slide.css">
+  </head>
+  <body>
+    <div class="presentation-container"> 
+      <div class="slide">
+        <div class="slide-content">
+          <div class="content-title">
+            <h1>整體總覽</h1>
+          </div>
+          <!-- 選項 1: 70%/30% 佈局-->
+          <!-- 選項 2: 100% 全寬表格佈局-->
+          <div class="content-body layout-full">
+            <div class="full-width-content">
+              <h2>凱崴數位官方網站健檢報告</h2>
+              <table class="report-table">
+                <thead>
+                  <tr>
+                    <th>指標</th>
+                    <th>評估結果</th>
+                    <th>評分說明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>手機版 PageSpeed</td>
+                    <td>95 / 100</td>
+                    <td>極佳，載入快速、阻塞少</td>
+                  </tr>
+                  <tr>
+                    <td>桌機版 PageSpeed</td>
+                    <td>93 / 100</td>
+                    <td>優異，整體效能佳</td>
+                  </tr>
+                  <tr>
+                    <td>SEO 標準符合度</td>
+                    <td>約 85%</td>
+                    <td>可再優化標題、描述與語意標記</td>
+                  </tr>
+                  <tr>
+                    <td>圖片優化程度</td>
+                    <td>中等</td>
+                    <td>缺少 ALT、命名通用且缺關鍵字</td>
+                  </tr>
+                  <tr>
+                    <td>結構化內容支援</td>
+                    <td>不足</td>
+                    <td>缺乏明確 Schema 標記 (如 Organization、LocalBusiness)</td>
+                  </tr>
+                  <tr>
+                    <td>網站內容品質</td>
+                    <td>較薄弱</td>
+                    <td>文字量少，缺乏長尾關鍵字與 FAQ 結構</td>
+                  </tr>
+                  <tr>
+                    <td>內外部連結健康度</td>
+                    <td>基礎可用</td>
+                    <td>沒有明顯錯誤，但缺少內鏈與導引 CTA</td>
+                  </tr>
+                  <tr>
+                    <td>Sitemap/Robots.txt</td>
+                    <td>無</td>
+                    <td>建議補足以利搜尋引擎收錄</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 佈局切換功能
+    document.addEventListener('DOMContentLoaded', function() {
+      // 只在桌面版啟用佈局切換
+      if (window.innerWidth > 768) {
+        const splitLayout = document.querySelector('.layout-split');
+        const fullLayout = document.querySelector('.layout-full');
+        
+        if (splitLayout) splitLayout.style.display = 'none';
+        if (fullLayout) fullLayout.style.display = 'flex';
+        
+        // 添加切換按鈕
+        const title = document.querySelector('.content-title h1');
+        if (title) {
+          title.style.cursor = 'pointer';
+          title.title = '點擊切換佈局';
+          title.addEventListener('click', function() {
+            if (splitLayout.style.display === 'flex') {
+              splitLayout.style.display = 'none';
+              fullLayout.style.display = 'flex';
+              title.textContent = '整體總覽';
+            } else {
+              splitLayout.style.display = 'flex';
+              fullLayout.style.display = 'none';
+              title.textContent = '整體總覽';
+            }
+          });
         }
-      });
-    }
-  }
-});</script></html>
+      }
+    });
+  </script>
+</html>
