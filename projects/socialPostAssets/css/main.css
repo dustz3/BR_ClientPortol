@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1e1e1e;
+  background: #ededed;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.content-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.header-section {
+  background: linear-gradient(135deg, #d5af73, #9d7543);
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.header-section .main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.content-section {
+  padding: 3rem 2rem;
+}
+.content-section .section-title {
+  color: #9d7543;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #d5af73;
+  padding-bottom: 0.5rem;
+}
+.seo-geo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  margin: 2rem 0;
+}
+.seo-geo-table thead {
+  background: linear-gradient(135deg, #d5af73, #9d7543);
+}
+.seo-geo-table thead th {
+  color: #fff;
+  font-weight: 600;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.seo-geo-table thead th:first-child {
+  background: rgba(255,255,255,0.15);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.seo-geo-table tbody tr {
+  border-bottom: 1px solid rgba(157,117,67,0.1);
+  transition: background-color 0.3s ease;
+}
+.seo-geo-table tbody tr:hover {
+  background-color: rgba(213,175,115,0.08);
+}
+.seo-geo-table tbody tr:last-child {
+  border-bottom: none;
+}
+.seo-geo-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+}
+.seo-geo-table tbody td:first-child {
+  background-color: rgba(213,175,115,0.1);
+  font-weight: 600;
+  color: #9d7543;
+  width: 20%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.seo-geo-table tbody td:nth-child(2) {
+  color: #1e1e1e;
+  width: 40%;
+  border-right: 1px solid rgba(157,117,67,0.2);
+  text-align: left;
+}
+.seo-geo-table tbody td:last-child {
+  color: #1e1e1e;
+  width: 40%;
+  text-align: left;
+}
+.permission-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  margin: 2rem 0;
+}
+.permission-matrix-table thead {
+  background: linear-gradient(135deg, #1e3a5f, #2c4a6b);
+}
+.permission-matrix-table thead th {
+  color: #fff;
+  font-weight: 600;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.permission-matrix-table thead th.function-header {
+  background: rgba(255,255,255,0.15);
+  font-weight: 700;
+  text-align: left;
+  min-width: 180px;
+}
+.permission-matrix-table thead th.role-header {
+  min-width: 100px;
+}
+.permission-matrix-table tbody tr {
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+.permission-matrix-table tbody tr:hover {
+  background-color: rgba(173,216,230,0.2);
+}
+.permission-matrix-table tbody tr:last-child {
+  border-bottom: none;
+}
+.permission-matrix-table tbody .function-cell {
+  background-color: rgba(30,58,95,0.08);
+  font-weight: 600;
+  color: #1e3a5f;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-right: 1px solid #ccc;
+}
+.permission-matrix-table tbody .permission-cell {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-left: 1px solid #ccc;
+}
+.permission-matrix-table tbody .permission-cell.allowed {
+  background-color: rgba(173,216,230,0.3);
+  color: #1e3a5f;
+}
+.permission-matrix-table tbody .permission-cell.denied {
+  background-color: rgba(32,32,32,0.1);
+  color: #202020;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .header-section {
+    padding: 2rem 1rem;
+  }
+  .header-section .main-title {
+    font-size: 2rem;
+  }
+  .content-section {
+    padding: 2rem 1rem;
+  }
+  .content-section .section-title {
+    font-size: 1.5rem;
+  }
+  .seo-geo-table,
+  .permission-matrix-table {
+    font-size: 0.85rem;
+  }
+  .seo-geo-table thead th,
+  .permission-matrix-table thead th {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .seo-geo-table tbody td,
+  .permission-matrix-table tbody td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
