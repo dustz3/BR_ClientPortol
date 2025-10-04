@@ -1,87 +1,29 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技術面檢查 - 品耀數位行銷</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/projects/kaiwei/slide.css">
-  </head>
-  <body>
-    <div class="presentation-container"> 
-      <div class="slide">
-        <div class="slide-content">
-          <div class="content-title">
-            <h1 class="slide-title">技術面檢查：Sitemap、Robots、GA</h1>
-          </div>
-          <div class="content-body layout-full">
-            <div class="full-width-content">
-              <table class="report-table">
-                <thead>
-                  <tr>
-                    <th>項目</th>
-                    <th>狀態</th>
-                    <th>建議與做法</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Sitemap.xml</td>
-                    <td><span class="status-text">無</span></td>
-                    <td><span class="suggestion-text">建議建立並提交至 Google Search Console</span></td>
-                  </tr>
-                  <tr>
-                    <td>Robots.txt</td>
-                    <td><span class="status-text">無</span></td>
-                    <td><span class="suggestion-text">建立 robots.txt 檔案，規範爬蟲行為</span></td>
-                  </tr>
-                  <tr>
-                    <td>Google Analytics</td>
-                    <td><span class="status-text">已安裝</span></td>
-                    <td><span class="suggestion-text">建議設定目標轉換追蹤與事件追蹤</span></td>
-                  </tr>
-                  <tr>
-                    <td>Google Search Console</td>
-                    <td><span class="status-text">未驗證</span></td>
-                    <td><span class="suggestion-text">建議驗證網站所有權並提交 Sitemap</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script>
-    // 佈局切換功能
-    document.addEventListener('DOMContentLoaded', function() {
-      // 預設顯示全寬佈局
-      const splitLayout = document.querySelector('.layout-split');
-      const fullLayout = document.querySelector('.layout-full');
-      
-      if (splitLayout) splitLayout.style.display = 'none';
-      if (fullLayout) fullLayout.style.display = 'flex';
-      
-      // 添加切換按鈕
-      const title = document.querySelector('.content-title h1');
-      if (title) {
-        title.style.cursor = 'pointer';
-        title.title = '點擊切換佈局';
-        title.addEventListener('click', function() {
-          if (splitLayout.style.display === 'flex') {
-            splitLayout.style.display = 'none';
-            fullLayout.style.display = 'flex';
-            title.textContent = '技術面檢查：Sitemap、Robots、GA';
-          } else {
-            splitLayout.style.display = 'flex';
-            fullLayout.style.display = 'none';
-            title.textContent = '技術面檢查：Sitemap、Robots、GA';
-          }
-        });
-      }
-    });
-  </script>
-</html>
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>技術面檢查 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1 class="slide-title">技術面檢查：Sitemap、Robots、GA</h1></div><div class="content-body layout-full"><div class="full-width-content"><table class="report-table"><thead><tr><th>項目</th><th>狀態</th><th>建議與做法</th></tr></thead><tbody><tr><td>Sitemap.xml</td><td><span class="status-text">無</span></td><td><span class="suggestion-text">建議建立並提交至 Google Search Console</span></td></tr><tr><td>Robots.txt</td><td><span class="status-text">無</span></td><td><span class="suggestion-text">建立 robots.txt 檔案，規範爬蟲行為</span></td></tr><tr><td>Google Analytics</td><td><span class="status-text">已安裝</span></td><td><span class="suggestion-text">建議設定目標轉換追蹤與事件追蹤</span></td></tr><tr><td>Google Search Console</td><td><span class="status-text">未驗證</span></td><td><span class="suggestion-text">建議驗證網站所有權並提交 Sitemap</span></td></tr></tbody></table></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '技術面檢查：Sitemap、Robots、GA';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '技術面檢查：Sitemap、Robots、GA';
+        }
+      });
+    }
+  }
+});</script></html>

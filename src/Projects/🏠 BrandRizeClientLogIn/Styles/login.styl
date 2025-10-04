@@ -1,0 +1,162 @@
+// 登入樣式文件 - 客戶專屬登入介面
+
+// 引入專案變數
+@import 'variables.styl'
+
+// 基礎重置
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+// 基礎字體
+body
+  font-family 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif
+  line-height 1.6
+  color #fff
+  background #1e1e1e
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  height 100vh
+
+// 容器
+.container
+  display flex
+
+  width 800px
+  height 500px
+  margin 0 auto 
+  background-color #fff
+  border-radius 1rem
+  overflow hidden
+  .left-content
+    width 60%
+    height 100%
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    
+    img
+      width 100%
+      height 100%
+      object-fit cover
+      object-position center
+  .right-content
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 40%
+    height 100%
+    .company-header
+      display flex 
+      flex-direction row
+      align-items center 
+      justify-content center
+      margin 0 auto
+      .company-logo
+        display flex
+        justify-content center
+        align-items center
+        width 65px
+        height 65px 
+        border-radius 5rem
+        background $gredient-color
+        img
+          width 75%
+          height 75%
+      .company-info
+        display flex 
+        flex-direction column
+        padding 0 .5rem 0
+        h1.company-name
+          font-size 1.8rem
+          line-height 30px  
+          color $secondary-color
+          border-radius 5rem 
+          margin 0
+          padding 0
+        p
+          font-size 1rem 
+          color #666
+          margin 0
+          padding 0
+          text-align left
+          letter-spacing 0.1em
+          word-spacing 0.2em 
+
+// Footer 樣式
+.footer
+  text-align center
+  padding 1rem  
+  
+  p
+    margin 0
+    color #6c757d
+    font-size 0.9rem
+
+// 引入組件樣式
+@import 'form.styl'
+
+// 測試樣式 - 確認自動編譯
+.container .right-content p
+  color $primary-color
+  // font-weight bold
+  margin-top 1rem
+
+// 手機版響應式設計
+@media (max-width: 768px)
+  body
+    // padding 1rem
+    height auto
+    min-height 100vh
+    
+  .container
+    width 95%
+    max-width 400px
+    height auto
+    min-height 500px
+    flex-direction column
+    
+    .left-content
+      display none  // 隱藏左側圖片
+      
+    .right-content
+      width 100%
+      height 100%
+      padding 2rem 1.5rem 2.5rem
+      justify-content flex-start
+      
+      .company-header
+        margin-bottom .5rem
+        flex-direction column
+        align-items center
+        justify-content center
+        
+        .company-logo
+          width 80px
+          height 80px
+          margin-bottom 1rem
+          
+        .company-info
+          padding-left 0
+          padding 0
+          text-align center
+          
+          h1.company-name
+            font-size 2rem
+            
+          p.company-slogan
+            width 100%
+            display flex   
+            margin-top .5rem
+            font-size 1rem 
+            justify-content center
+            letter-spacing .5rem
+            word-spacing 0em
+            padding-left 0.5rem
+            align-content center
+

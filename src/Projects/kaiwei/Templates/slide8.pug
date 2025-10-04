@@ -1,0 +1,59 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 總結與優化優先順序 - 品耀數位行銷
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="css/slide.css")
+  body
+    .presentation-container
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 總結與優化優先順序
+          .content-body.layout-full
+            .full-width-content
+              h2 高優先 (建議立即處理)
+              ul
+                li 網站標題與描述重新撰寫 (每頁唯一且含關鍵字)
+                li 補上 sitemap.xml 與 robots.txt
+                li 所有圖片加 ALT 描述與語意檔名
+              h2 中優先 (第二階段進行)
+              ul
+                li 強化 H1~H3 結構階層
+                li 增加內頁文字內容與 FAQ
+                li 建立 Footer 區與內部導引系統
+
+  script.
+    // 佈局切換功能
+    document.addEventListener('DOMContentLoaded', function() {
+      // 只在桌面版顯示佈局切換功能
+      if (window.innerWidth > 768) {
+        const splitLayout = document.querySelector('.layout-split');
+        const fullLayout = document.querySelector('.layout-full');
+
+        if (splitLayout) splitLayout.style.display = 'none';
+        if (fullLayout) fullLayout.style.display = 'flex';
+
+        // 添加標題點擊功能
+        const title = document.querySelector('.content-title h1');
+        if (title) {
+          title.style.cursor = 'pointer';
+          title.title = '點擊切換佈局';
+          title.addEventListener('click', function() {
+            if (splitLayout.style.display === 'flex') {
+              splitLayout.style.display = 'none';
+              fullLayout.style.display = 'flex';
+              title.textContent = '總結與優化優先順序';
+            } else {
+              splitLayout.style.display = 'flex';
+              fullLayout.style.display = 'none';
+              title.textContent = '總結與優化優先順序';
+            }
+          });
+        }
+      }
+    });

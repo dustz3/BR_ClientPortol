@@ -1,0 +1,25 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 🔐 品耀客戶專屬登入系統
+    link(rel="stylesheet" href="css/login.css")
+
+body
+  .container
+    .left-content
+      img(src="images/client-portol-login.png" alt="客戶入口圖片")
+    .right-content
+      .company-header
+        .company-logo
+          img(src="images/logo.svg" alt="品耀數位行銷 LOGO")
+        .company-info
+          h1.company-name 品耀數位行銷
+          p.company-slogan 讓品牌發光，價值躍升
+      
+      include form.pug
+  
+  .footer
+    p © 2025 品耀數位行銷
+    p.small-text(style="font-size: 12px; color: #666; margin-top: 5px;") 

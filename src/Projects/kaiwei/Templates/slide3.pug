@@ -1,0 +1,79 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 內容結構與語意標記 - 品耀數位行銷
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="css/slide.css")
+  body
+    .presentation-container
+      .slide
+        .slide-content
+          .content-title
+            h1 內容結構與語意標記（H1~H3）
+          .content-body.layout-full
+            .full-width-content
+              h2 檢查重點：
+              ul
+                li 有使用 H1~H3 標籤，但階層未明確、部分頁面重複 H1
+                li H2/H3 未結合服務關鍵字
+              h2 改善建議：
+              table.report-table
+                thead
+                  tr
+                    th 頁面
+                    th 建議 H1
+                    th 建議 H2/H3
+                tbody
+                  tr
+                    td 首頁
+                    td
+                      span.h1-text 凱崴數位雲端預約系統｜LINE 整合收款管理平台
+                    td
+                      span.h2h3-text 最強雲端管理系統 / 介面完整易操作，操作簡單,官網＋Line即時預約,多種金流付款方式最便利...
+                  tr
+                    td 關於我們
+                    td
+                      span.h1-text 關於凱崴數位｜專注預約管理與雲端系統開發
+                    td
+                      span.h2h3-text 凱崴數位的服務理念 / 01 專業、02 服務、03 熱忱
+                  tr
+                    td 服務項目
+                    td
+                      span.h1-text 最為您著想的電商平台，提供多業種服務
+                    td
+                      span.h2h3-text 寵物店管理系統 / 功能亮點
+
+  script.
+    // 佈局切換功能
+    document.addEventListener('DOMContentLoaded', function() {
+      // 只在桌面版顯示佈局切換功能
+      if (window.innerWidth > 768) {
+        const splitLayout = document.querySelector('.layout-split');
+        const fullLayout = document.querySelector('.layout-full');
+
+        if (splitLayout) splitLayout.style.display = 'none';
+        if (fullLayout) fullLayout.style.display = 'flex';
+
+        // 添加標題點擊功能
+        const title = document.querySelector('.content-title h1');
+        if (title) {
+          title.style.cursor = 'pointer';
+          title.title = '點擊切換佈局';
+          title.addEventListener('click', function() {
+            if (splitLayout.style.display === 'flex') {
+              splitLayout.style.display = 'none';
+              fullLayout.style.display = 'flex';
+              title.textContent = '內容結構與語意標記（H1~H3）';
+            } else {
+              splitLayout.style.display = 'flex';
+              fullLayout.style.display = 'none';
+              title.textContent = '內容結構與語意標記（H1~H3）';
+            }
+          });
+        }
+      }
+    });

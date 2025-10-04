@@ -1,67 +1,29 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>內部連結與結構建議 - 品耀數位行銷</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/projects/kaiwei/slide.css">
-  </head>
-  <body>
-    <div class="presentation-container"> 
-      <div class="slide">
-        <div class="slide-content">
-          <div class="content-title">
-            <h1 class="slide-title">內部連結與結構建議</h1>
-          </div>
-          <div class="content-body layout-full">
-            <div class="full-width-content">
-              <h2>目前狀況</h2>
-              <ul>
-                <li>主選單與頁腳無重複導引設計(未設 Footer)</li>
-                <li>無站內連結系統(如:從首頁連去 About 服務細節)</li>
-              </ul>
-              <h2>建議對策</h2>
-              <ul>
-                <li>新增全站 Footer,包含:快速連結、聯絡資訊、社群連結、Sitemap</li>
-                <li>加強服務內部連結(從首頁導去「金流串接」說明、案例、FAQ)</li>
-                <li>每頁加入明確 CTA (Call To Action) 例如「立即洽詢」「索取報價」</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script>
-    // 佈局切換功能
-    document.addEventListener('DOMContentLoaded', function() {
-      // 預設顯示全寬佈局
-      const splitLayout = document.querySelector('.layout-split');
-      const fullLayout = document.querySelector('.layout-full');
-      
-      if (splitLayout) splitLayout.style.display = 'none';
-      if (fullLayout) fullLayout.style.display = 'flex';
-      
-      // 添加切換按鈕
-      const title = document.querySelector('.content-title h1');
-      if (title) {
-        title.style.cursor = 'pointer';
-        title.title = '點擊切換佈局';
-        title.addEventListener('click', function() {
-          if (splitLayout.style.display === 'flex') {
-            splitLayout.style.display = 'none';
-            fullLayout.style.display = 'flex';
-            title.textContent = '內部連結與結構建議';
-          } else {
-            splitLayout.style.display = 'flex';
-            fullLayout.style.display = 'none';
-            title.textContent = '內部連結與結構建議';
-          }
-        });
-      }
-    });
-  </script>
-</html>
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>內部連結與結構建議 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1 class="slide-title">內部連結與結構建議</h1></div><div class="content-body layout-full"><div class="full-width-content"><h2>目前狀況</h2><ul><li>主選單與頁腳無重複導引設計(未設 Footer)</li><li>無站內連結系統(如:從首頁連去 About 服務細節)</li></ul><h2>建議對策</h2><ul><li>新增全站 Footer,包含:快速連結、聯絡資訊、社群連結、Sitemap</li><li>加強服務內部連結(從首頁導去「金流串接」說明、案例、FAQ)</li><li>每頁加入明確 CTA (Call To Action) 例如「立即洽詢」「索取報價」</li></ul></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '內部連結與結構建議';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '內部連結與結構建議';
+        }
+      });
+    }
+  }
+});</script></html>

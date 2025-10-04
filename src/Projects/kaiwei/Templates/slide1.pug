@@ -1,0 +1,108 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 凱崴數位網站健檢報告 - 品耀數位行銷
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="css/slide.css")
+  body
+    .presentation-container
+      .slide
+        .slide-content
+          .content-title
+            h1 整體總覽
+
+          // 選項 1: 70%/30% 佈局
+          //- .content-body.layout-split
+          //-   .content-left
+          //-     .content-left-title
+          //-       h2 技術指標
+          //-       p 首頁包含主要關鍵字
+          //-       p 缺少品牌名稱識別
+          //-       p 標題缺少搜尋意圖
+          //-     .content-left-title
+          //-       h2 改善建議
+          //-       p 使用主要關鍵字｜搜尋意圖格式化
+          //-       p 範例：「預約系統整合服務」凱崴數位
+          //-       p 提升品牌識別度和搜尋排名
+          //-   .content-right
+          //-     .image-placeholder
+          //-       p 網站截圖
+
+          // 選項 2: 100% 全寬表格佈局
+          .content-body.layout-full
+            .full-width-content
+                h2 凱崴數位官方網站技術檢查結果
+                table.report-table
+                  thead
+                    tr
+                      th 指標
+                      th 評估結果
+                      th 評分說明
+                  tbody
+                    tr
+                      td 手機版 PageSpeed
+                      td 95 / 100
+                      td 極佳，載入快速、阻塞少
+                    tr
+                      td 桌機版 PageSpeed
+                      td 93 / 100
+                      td 優異，整體效能佳
+                    tr
+                      td SEO 標準符合度
+                      td 約 85%
+                      td 可再優化標題、描述與語意標記
+                    tr
+                      td 圖片優化程度
+                      td 中等
+                      td 缺少 ALT、命名通用且缺關鍵字
+                    tr
+                      td 結構化內容支援
+                      td 不足
+                      td 缺乏明確 Schema 標記 (如 Organization、LocalBusiness)
+                    tr
+                      td 網站內容品質
+                      td 較薄弱
+                      td 文字量少，缺乏長尾關鍵字與 FAQ 結構
+                    tr
+                      td 內外部連結健康度
+                      td 基礎可用
+                      td 沒有明顯錯誤，但缺少內鏈與導引 CTA
+                    tr
+                      td Sitemap/Robots.txt
+                      td 無
+                      td 建議補足以利搜尋引擎收錄
+
+  script.
+    // 佈局切換功能
+    document.addEventListener('DOMContentLoaded', function() {
+      // 只在桌面版顯示佈局切換功能
+      if (window.innerWidth > 768) {
+        const splitLayout = document.querySelector('.layout-split');
+        const fullLayout = document.querySelector('.layout-full');
+
+        if (splitLayout) splitLayout.style.display = 'none';
+        if (fullLayout) fullLayout.style.display = 'flex';
+
+        // 添加標題點擊功能
+        const title = document.querySelector('.content-title h1');
+        if (title) {
+          title.style.cursor = 'pointer';
+          title.title = '點擊切換佈局';
+          title.addEventListener('click', function() {
+            if (splitLayout.style.display === 'flex') {
+              splitLayout.style.display = 'none';
+              fullLayout.style.display = 'flex';
+              title.textContent = '整體總覽';
+            } else {
+              splitLayout.style.display = 'flex';
+              fullLayout.style.display = 'none';
+              title.textContent = '整體總覽';
+            }
+          });
+        }
+      }
+    });

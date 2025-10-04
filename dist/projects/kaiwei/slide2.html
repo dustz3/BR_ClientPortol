@@ -1,93 +1,29 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>建議對策 - 品耀數位行銷</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/projects/kaiwei/slide.css">
-  </head>
-  <body>
-    <div class="presentation-container"> 
-      <div class="slide">
-        <div class="slide-content">
-          <div class="content-title">
-            <h1>標題與描述分析（Meta Tags）</h1>
-          </div>
-          <div class="content-body layout-full">
-            <div class="full-width-content">
-              <h2>目前狀況</h2>
-              <ul>
-                <li>多數頁面標題未結合品牌名（如首頁、關於我們）</li>
-                <li>Meta Description 雖有填寫，但偏短且無關鍵字導向</li>
-              </ul>
-              <h2>問題：</h2>
-              <ul>
-                <li>標題無強調主服務（無「整合式金流」、「網站架設」、「管理系統」等字樣）</li>
-                <li>無一致性的品牌露出</li>
-              </ul>
-              <h2>建議對策</h2>
-              <table class="report-table">
-                <thead>
-                  <tr>
-                    <th>頁面</th>
-                    <th>建議 Title</th>
-                    <th>建議 Meta Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>首頁</td>
-                    <td><span class="title-text">凱崴數位｜雲端預約管理與LINE整合專家，打造智慧商務後台</span></td>
-                    <td><span class="description-text">凱崴數位提供專為服務業打造的預約管理解決方案，整合 LINE、訂單、金流與客戶管理，適用寵物店、美業、健身房與瑜珈教室，協助中小型業者提升營運效率。</span></td>
-                  </tr>
-                  <tr>
-                    <td>關於我們</td>
-                    <td><span class="title-text">關於凱崴數位｜預約管理與LINE整合專家，打造智慧商務後台</span></td>
-                    <td><span class="description-text">凱崴數位專注開發預約管理與顧客經營系統，整合LINE官方帳號串接、銷售分析與多元模組，幫助業主輕鬆管理門市營運大小事。</span></td>
-                  </tr>
-                  <tr>
-                    <td>服務項目</td>
-                    <td><span class="title-text">凱崴數位｜多元產業預約管理系統，專為寵物、美業、健身與瑜珈打造</span></td>
-                    <td><span class="description-text">凱崴數位提供寵物店、美業、健身房與瑜珈教室等多產業預約管理系統，整合 LINE 串接、金流、排班與顧客資料，提升營運效率與顧客體驗。</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script>
-    // 佈局切換功能
-    document.addEventListener('DOMContentLoaded', function() {
-      // 預設顯示全寬佈局
-      const splitLayout = document.querySelector('.layout-split');
-      const fullLayout = document.querySelector('.layout-full');
-      
-      if (splitLayout) splitLayout.style.display = 'none';
-      if (fullLayout) fullLayout.style.display = 'flex';
-      
-      // 添加切換按鈕
-      const title = document.querySelector('.content-title h1');
-      if (title) {
-        title.style.cursor = 'pointer';
-        title.title = '點擊切換佈局';
-        title.addEventListener('click', function() {
-          if (splitLayout.style.display === 'flex') {
-            splitLayout.style.display = 'none';
-            fullLayout.style.display = 'flex';
-            title.textContent = '建議對策';
-          } else {
-            splitLayout.style.display = 'flex';
-            fullLayout.style.display = 'none';
-            title.textContent = '建議對策';
-          }
-        });
-      }
-    });
-  </script>
-</html>
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>標題與描述分析 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1>標題與描述分析（Meta Tags）</h1></div><div class="content-body layout-full"><div class="full-width-content"><h2>目前狀況</h2><ul><li>多數頁面標題未結合品牌名（如首頁、關於我們）</li><li>Meta Description 雖有填寫，但偏短且無關鍵字導向</li></ul><h2>問題：</h2><ul><li>標題無強調主服務（無「整合式金流」、「網站架設」、「管理系統」等字樣）</li><li>無一致性的品牌露出</li></ul><h2>建議對策</h2><table class="report-table"><thead><tr><th>頁面</th><th>建議 Title</th><th>建議 Meta Description</th></tr></thead><tbody><tr><td>首頁</td><td><span class="title-text">凱崴數位｜雲端預約管理與LINE整合專家，打造智慧商務後台</span></td><td><span class="description-text">凱崴數位提供專為服務業打造的預約管理解決方案，整合 LINE、訂單、金流與客戶管理，適用寵物店、美業、健身房與瑜珈教室，協助中小型業者提升營運效率。</span></td></tr><tr><td>關於我們</td><td><span class="title-text">關於凱崴數位｜預約管理與LINE整合專家，打造智慧商務後台</span></td><td><span class="description-text">凱崴數位專注開發預約管理與顧客經營系統，整合LINE官方帳號串接、銷售分析與多元模組，幫助業主輕鬆管理門市營運大小事。</span></td></tr><tr><td>服務項目</td><td><span class="title-text">凱崴數位｜多元產業預約管理系統，專為寵物、美業、健身與瑜珈打造</span></td><td><span class="description-text">凱崴數位提供寵物店、美業、健身房與瑜珈教室等多產業預約管理系統，整合 LINE 串接、金流、排班與顧客資料，提升營運效率與顧客體驗。</span></td></tr></tbody></table></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        }
+      });
+    }
+  }
+});</script></html>

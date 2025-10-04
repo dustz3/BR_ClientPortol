@@ -1,0 +1,218 @@
+// SocialPost 專案樣式
+
+// 引入專案變數
+@import 'variables.styl'
+
+// 基礎重置
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+// 基礎字體
+body
+  font-family 'Inter', 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif
+  line-height 1.6
+  color $text-color
+  background $background-light
+  min-height 100vh
+  padding 2rem 0
+
+// 容器
+.container
+  max-width 1200px
+  margin 0 auto
+  padding 0 1rem
+
+// 內容包裝器
+.content-wrapper
+  background white
+  border-radius 16px
+  box-shadow 0 8px 32px rgba(0, 0, 0, 0.1)
+  overflow hidden
+
+// 標題區域
+.header-section
+  background $gredient-color
+  color white
+  padding 3rem 2rem
+  text-align center
+  
+  .main-title
+    font-size 2.5rem
+    font-weight 700
+    margin-bottom 1rem
+    text-shadow 0 2px 4px rgba(0, 0, 0, 0.2)
+
+// 內容區域
+.content-section
+  padding 3rem 2rem
+  
+  .section-title
+    color $primary-color
+    font-size 1.8rem
+    font-weight 600
+    margin-bottom 1.5rem
+    border-bottom 3px solid $accent-color
+    padding-bottom 0.5rem
+
+// 表格樣式
+.seo-geo-table
+  width 100%
+  border-collapse collapse
+  font-size 1rem
+  background-color #fff
+  border-radius 12px
+  overflow hidden
+  box-shadow 0 8px 24px rgba(0, 0, 0, 0.15)
+  margin 2rem 0
+
+  thead
+    background $gredient-color
+    
+    th
+      color white
+      font-weight 600
+      padding 1.2rem 1rem
+      text-align center
+      font-size 1.1rem
+      border none
+      text-shadow 0 1px 2px rgba(0, 0, 0, 0.2)
+      
+      &:first-child
+        background rgba(255, 255, 255, 0.15)
+        font-weight 700
+        font-size 1.2rem
+
+  tbody
+    tr
+      border-bottom 1px solid rgba($primary-color, 0.1)
+      transition background-color 0.3s ease
+      
+      &:hover
+        background-color rgba($accent-color, 0.08)
+      
+      &:last-child
+        border-bottom none
+
+    td
+      padding 1rem
+      vertical-align middle
+      line-height 1.6
+      word-wrap break-word
+      white-space normal
+      text-align left
+      
+      &:first-child
+        background-color rgba($accent-color, 0.1)
+        font-weight 600
+        color $primary-color
+        width 20%
+        text-align center
+        font-size 1.1rem
+      
+      &:nth-child(2)
+        color $text-color
+        width 40%
+        border-right 1px solid rgba($primary-color, 0.2)
+        text-align left
+        
+      &:last-child
+        color $text-color
+        width 40%
+        text-align left
+
+// 權限矩陣表格樣式
+.permission-matrix-table
+  width 100%
+  border-collapse collapse
+  font-size 1rem
+  background-color #f8f9fa
+  border-radius 12px
+  overflow hidden
+  box-shadow 0 8px 24px rgba(0, 0, 0, 0.15)
+  margin 2rem 0
+
+  thead
+    background linear-gradient(135deg, #1e3a5f, #2c4a6b)
+    
+    th
+      color white
+      font-weight 600
+      padding 1.2rem 1rem
+      text-align center
+      font-size 1.1rem
+      border none
+      text-shadow 0 1px 2px rgba(0, 0, 0, 0.2)
+      
+      &.function-header
+        background rgba(255, 255, 255, 0.15)
+        font-weight 700
+        text-align left
+        min-width 180px
+        
+      &.role-header
+        min-width 100px
+
+  tbody
+    tr
+      border-bottom 1px solid #ccc
+      transition background-color 0.3s ease
+      
+      &:hover
+        background-color rgba(173, 216, 230, 0.2)
+      
+      &:last-child
+        border-bottom none
+
+    .function-cell
+      background-color rgba(30, 58, 95, 0.08)
+      font-weight 600
+      color #1e3a5f
+      padding 1rem 1.2rem
+      text-align left
+      border-right 1px solid #ccc
+      
+    .permission-cell
+      padding 1rem
+      text-align center
+      font-size 1.2rem
+      font-weight 700
+      border-left 1px solid #ccc
+      
+      &.allowed
+        background-color rgba(173, 216, 230, 0.3)
+        color #1e3a5f
+        
+      &.denied
+        background-color rgba(32, 32, 32, 0.1)
+        color #202020
+
+// 響應式設計
+@media (max-width: 768px)
+  .container
+    padding 0 0.5rem
+    
+  .header-section
+    padding 2rem 1rem
+    
+    .main-title
+      font-size 2rem
+      
+  .content-section
+    padding 2rem 1rem
+    
+    .section-title
+      font-size 1.5rem
+      
+  .seo-geo-table,
+  .permission-matrix-table
+    font-size 0.85rem
+    
+    thead th
+      padding 0.8rem 0.5rem
+      font-size 0.9rem
+      
+    tbody td
+      padding 0.8rem 0.5rem
+      font-size 0.85rem
