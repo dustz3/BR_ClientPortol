@@ -1,0 +1,41 @@
+@import 'variables.styl'
+
+html, body
+  font-family 'Inter', 'Microsoft JhengHei', 'PingFang TC', Arial, sans-serif
+  background primary-bg
+  margin 0
+
+.dashboard-body
+  background primary-bg
+
+.dashboard
+  max-width 1080px
+  margin 0 auto
+  padding 2rem 1rem
+
+.dashboard-header h1
+  margin 0 0 .5rem 0
+  color text-dark
+
+.dashboard-actions
+  display grid
+  grid-template-columns repeat(2, 1fr)
+  gap 1rem
+
+.dashboard-card
+  display block
+  text-decoration none
+  background #fff
+  color text-dark
+  border-radius 12px
+  padding 1.25rem
+  box-shadow 0 4px 12px rgba(0,0,0,.06)
+
+  h2
+    margin .25rem 0 .5rem
+    color accent
+
+@media (max-width: 768px)
+  .dashboard-actions
+    grid-template-columns 1fr
+

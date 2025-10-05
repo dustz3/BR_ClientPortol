@@ -5,6 +5,12 @@
       "projectPath": "projects/kaiwei/index.html",
       "displayName": "凱崴數位",
       "description": "凱崴數位官方網站 SEO 與速度健檢報告"
+    },
+    "ylpm": {
+      "password": "br09pj00125c01",
+      "projectPath": "projects/YLPM/index.html",
+      "displayName": "YLPM",
+      "description": "YLPM 專屬儀表板"
     }
   }
 }

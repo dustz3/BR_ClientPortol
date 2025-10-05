@@ -1,0 +1,41 @@
+html,
+body {
+  font-family: 'Inter', 'Microsoft JhengHei', 'PingFang TC', Arial, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+}
+.dashboard-body {
+  background: #f9fafb;
+}
+.dashboard {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.dashboard-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.dashboard-card {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.dashboard-card h2 {
+  margin: 0.25rem 0 0.5rem;
+  color: #b02418;
+}
+@media (max-width: 768px) {
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+}
