@@ -183,6 +183,7 @@ html, body
   .slide-content
     display flex
     flex-direction column 
+    gap 10px
     width 100%
     max-width 90vw 
     padding 2rem 5rem
@@ -245,6 +246,21 @@ html, body
         justify-content center
         align-items center 
         border-radius 20px
+        max-width 100%
+
+        // 圖片容器：限制圖片不超過左側卡片視覺比例
+        .image-box
+          width 100%
+          max-width 100%
+          overflow hidden
+
+        // 右側圖片保持比例且不超出容器
+        img
+          width 100%
+          height auto
+          max-width 100%
+          object-fit contain
+          display block
         
         .image-placeholder
           width 100%
@@ -297,6 +313,13 @@ html, body
           .image-placeholder
             height 150px
 
+// Desktop 覆寫：取消 align-items（回到預設）
+@media (min-width: 769px)
+  .slide
+    .slide-content
+      .content-body
+        align-items initial
+
 // 70%/30% 分割佈局
 .layout-split
   display flex
@@ -334,6 +357,53 @@ html, body
     li 
       margin-bottom 0.5rem
       margin-left 1rem
+
+
+.half-width-content
+  width 65%
+  background-color #fff
+  border-radius 20px
+  padding 2rem
+  box-shadow 0 2px 8px rgba(0, 0, 0, 0.1)
+  &:last-child
+     background-color none
+  h2
+    font-size 1.5rem
+    font-weight 600
+    color kaiwei-teal
+    margin 0 0 .5rem 0
+  
+  ul
+    font-size 1rem
+    color kaiwei-navy
+    line-height 1.2
+    list-style-type disc
+    padding-left 1rem !important  
+    margin-bottom 2rem
+    li 
+      margin-bottom 0.5rem
+      margin-left 1rem
+
+  // 充滿容器尺寸用法：在 .half-width-content 內包一層 .image-box
+  .image-box
+    width 100%
+    overflow hidden
+    border-radius 12px
+
+  .image-box img
+    width 100%
+    height 100%
+    object-fit cover
+    display block
+
+// 兩欄並排時，讓右側（第二個）卡片背景透明
+.slide-content > .half-width-content + .half-width-content,
+.content-body > .half-width-content + .half-width-content
+  background transparent !important
+  box-shadow none !important
+  padding 0 !important
+  width 35% !important
+  
 
 // 健檢報告表格樣式
 .report-table-container
@@ -684,6 +754,19 @@ html, body
     background transparent !important
     box-shadow none !important
 
+  .half-width-content
+    padding 0 !important
+    background transparent !important
+    box-shadow none !important
+    .image-box
+      display flex
+      justify-content center
+      align-items center
+      img
+        width 60%
+        height auto
+        overflow hidden
+        border-radius 12px
   .mobile-image
     order 2
 

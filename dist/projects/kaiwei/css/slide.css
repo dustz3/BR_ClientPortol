@@ -170,6 +170,7 @@ body {
 .slide .slide-content {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   width: 100%;
   max-width: 90vw;
   padding: 2rem 5rem;
@@ -232,6 +233,19 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  max-width: 100%;
+}
+.slide .slide-content .content-body .content-right .image-box {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.slide .slide-content .content-body .content-right img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
 }
 .slide .slide-content .content-body .content-right .image-placeholder {
   width: 100%;
@@ -282,6 +296,11 @@ body {
     height: 150px;
   }
 }
+@media (min-width: 769px) {
+  .slide .slide-content .content-body {
+    align-items: initial;
+  }
+}
 .layout-split {
   display: flex;
   flex-direction: row;
@@ -318,6 +337,52 @@ body {
 .full-width-content ul li {
   margin-bottom: 0.5rem;
   margin-left: 1rem;
+}
+.half-width-content {
+  width: 65%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.half-width-content:last-child {
+  background-color: none;
+}
+.half-width-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1b9c85;
+  margin: 0 0 0.5rem 0;
+}
+.half-width-content ul {
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.2;
+  list-style-type: disc;
+  padding-left: 1rem !important;
+  margin-bottom: 2rem;
+}
+.half-width-content ul li {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+.half-width-content .image-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.half-width-content .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slide-content > .half-width-content + .half-width-content,
+.content-body > .half-width-content + .half-width-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: 35% !important;
 }
 .report-table-container {
   width: 100%;
@@ -652,6 +717,22 @@ body {
     padding: 1.5rem !important;
     background: transparent !important;
     box-shadow: none !important;
+  }
+  .half-width-content {
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .half-width-content .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .half-width-content .image-box img {
+    width: 60%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 12px;
   }
   .mobile-image {
     order: 2;

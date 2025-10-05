@@ -1,22 +1,23 @@
 // kai-wei.tw 專案樣式 - 垂直滾動簡報
 
 // 變數定義
-// 凱崴數位專案色票
-kai-wei-teal = #4a9b8e        // 青綠色/海藍色
-kai-wei-red = #e74c3c         // 鮮豔紅色
-kai-wei-black = #2c3e50       // 純黑色
-kai-wei-cream = #f8f6f0       // 米色/淺奶油色
-kai-wei-orange = #e67e22      // 溫暖橘色/淺棕色
-kai-wei-navy = #34495e        // 深藍色/海軍藍
+@import 'variables.styl'
 
-// 主要色彩變數
-primary-color = kai-wei-black
-secondary-color = kai-wei-navy
-accent-color = kai-wei-teal
+// 與舊命名對齊（若仍有使用到舊變數名）
+kai-wei-teal = kaiwei-teal
+kai-wei-red = kaiwei-red
+kai-wei-black = kaiwei-black
+kai-wei-cream = kaiwei-green
+kai-wei-orange = kaiwei-orange
+kai-wei-navy = kaiwei-navy
+
+primary-color = kaiwei-black
+secondary-color = kaiwei-navy
+accent-color = kaiwei-teal
 success-color = #27ae60
-warning-color = kai-wei-orange
-text-color = kai-wei-black
-bg-color = #ffffff
+warning-color = kaiwei-orange
+text-color = kaiwei-black
+bg-color = kaiwei-green
 
 // 全域樣式
 *
@@ -28,6 +29,79 @@ html, body
   height: 100%
   overflow: hidden // 防止頁面滾動
   font-family: 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif
+  background kaiwei-green
+
+// Dashboard 背景（桌面）同 SEO 綠色系背景
+.dashboard-body
+  background kaiwei-green
+  @media (min-width: 1024px)
+    background kaiwei-green
+
+// Dashboard / Results 基礎
+.dashboard
+  max-width 960px
+  margin 40px auto
+  padding 20px
+  color #111827
+
+  .dashboard-header
+    margin-bottom 24px
+    h1
+      font-size 28px
+      margin-bottom 6px
+    p
+      color #6b7280
+
+  .dashboard-actions
+    display grid
+    grid-template-columns repeat(2, minmax(0, 1fr))
+    gap 16px
+
+    .dashboard-card
+      display block
+      background #ffffff
+      border 1px solid #e5e7eb
+      border-radius 12px
+      padding 20px
+      color #111827
+      text-decoration none
+      transition transform .15s ease, border-color .15s ease, box-shadow .15s ease
+      h2
+        margin 0 0 6px 0
+        font-size 20px
+      p
+        margin 0
+        color #6b7280
+      &:hover
+        transform translateY(-2px)
+        border-color #d1d5db
+        box-shadow 0 8px 24px rgba(0,0,0,.06)
+
+.results-container
+  max-width 960px
+  margin 40px auto
+  padding 20px
+  color #111827
+  .results-header
+    margin-bottom 16px
+  .results-section
+    margin 20px 0
+  .kpi-table
+    width 100%
+    border-collapse collapse
+    th, td
+      border 1px solid #e5e7eb
+      padding 10px
+      text-align center
+    th
+      background #f9fafb
+  .btn-back
+    display inline-block
+    margin-top 24px
+    color #2563eb
+    text-decoration none
+    &:hover
+      text-decoration underline
 
 // 登出按鈕樣式
 .logout-container
@@ -61,7 +135,7 @@ html, body
   width: 100%
   height: 100vh
   overflow: hidden
-  background-color: #efefef
+  background-color: kaiwei-green
 
 // 投影片樣式
 .slide
@@ -133,6 +207,30 @@ html, body
   gap: 2rem
   margin-top: 2rem
   max-width: 800px
+  .tool-item
+    h3
+      margin-bottom: .5rem
+    p
+      margin 0
+
+// 使內容區與表格在簡報中水平置中（套用於 results-slide1 等頁）
+.full-width-content
+  max-width 960px
+  margin 0 auto
+  display flex
+  flex-direction column
+  align-items center
+
+.report-table
+  margin 16px auto
+
+// 半寬內容容器：用於需要較窄閱讀寬度的版面
+.half-width-content
+  width 50%
+  margin 0 auto
+  display flex
+  flex-direction column
+  align-items center
   
   .tool-item
     padding: 1.5rem
@@ -156,6 +254,11 @@ html, body
     gap: 2rem
     margin-bottom: 2rem
     max-width: 800px
+    .website-screenshot
+      img
+        max-width: 100%
+        height: auto
+        display: block
     
     .device-item
       padding: 1.5rem

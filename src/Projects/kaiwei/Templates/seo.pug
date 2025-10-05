@@ -1,0 +1,316 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 📊 凱崴數位 SEO 建議 - 品耀數位行銷
+    link(rel="stylesheet" href="css/slide.css")
+  body
+    // 登出按鈕
+    .logout-container
+      button(onclick="logout()").logout-btn
+        span.logout-text 登出
+        img.logout-icon(src="images/log-out.svg" alt="登出")
+    
+    // 頁面指示器
+    .slide-indicator#slideIndicator
+    
+    .presentation-container
+      // 封面頁
+      .slide
+        .slide-content
+          .content-body.layout-cover
+            .content-left
+              .content-title
+                h1 凱崴數位網站 SEO 健檢報告
+              // 手機版圖片 - 在 h1 和 h2 之間
+              .mobile-image
+                .website-screenshot
+                  img(src="images/seo-for-kaiwei.png" alt="凱崴數位網站截圖")
+              .content-sub
+                h2 網站名稱｜<span class="company-name">凱崴數位有限公司（kai-wei.tw）</span>
+                h2 檢查時間｜2025 年 9 月 10 日
+                h2 檢查範圍｜標題、描述、結構、速度、圖片、連結等基礎狀況
+                h2 檢查目的｜協助提升搜尋能見度、改善基礎架構與使用者體驗，作為後續優化依據
+              .content-info
+                h3 報告整理：品耀數位行銷（Brandrize）
+            .content-right
+              // 桌面版圖片 - 在右側
+              .desktop-image
+                .website-screenshot
+                  img(src="images/seo-for-kaiwei.png" alt="凱崴數位網站截圖")
+
+      // 第1頁：整體總覽
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 整體總覽
+          .content-body.layout-full
+            .full-width-content
+              table.report-table
+                thead
+                  tr
+                    th 指標
+                    th 評估結果
+                    th 評分說明
+                tbody
+                  tr
+                    td 手機版 PageSpeed
+                    td 95 / 100
+                    td 極佳，載入快速、阻塞少
+                  tr
+                    td 桌機版 PageSpeed
+                    td 93 / 100
+                    td 優異，整體效能佳
+                  tr
+                    td SEO 標準符合度
+                    td 約 85%
+                    td 可再優化標題、描述與語意標記
+                  tr
+                    td 圖片優化程度
+                    td 中等
+                    td 缺少 ALT、命名通用且缺關鍵字
+                  tr
+                    td 結構化內容支援
+                    td 不足
+                    td 缺乏明確 Schema 標記 (如 Organization、LocalBusiness)
+                  tr
+                    td 網站內容品質
+                    td 較薄弱
+                    td 文字量少，缺乏長尾關鍵字與 FAQ 結構
+                  tr
+                    td 內外部連結健康度
+                    td 基礎可用
+                    td 沒有明顯錯誤，但缺少內鏈與導引 CTA
+                  tr
+                    td Sitemap/Robots.txt
+                    td 無
+                    td 建議補足以利搜尋引擎收錄
+
+      // 第2頁：建議對策
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 標題與描述分析（Meta Tags）
+          .content-body.layout-full
+            .full-width-content
+              h2 目前狀況
+              ul
+                li 多數頁面標題未結合品牌名（如首頁、關於我們）
+                li Meta Description 雖有填寫，但偏短且無關鍵字導向
+              h2 問題：
+              ul
+                li 標題無強調主服務（無「整合式金流」、「網站架設」、「管理系統」等字樣）
+                li 無一致性的品牌露出
+              h2 建議對策
+              table.report-table
+                thead
+                  tr
+                    th 頁面
+                    th 建議 Title
+                    th 建議 Meta Description
+                tbody
+                  tr
+                    td 首頁
+                    td
+                      span.title-text 凱崴數位｜雲端預約管理與LINE整合專家，打造智慧商務後台
+                    td
+                      span.description-text 凱崴數位提供專為服務業打造的預約管理解決方案，整合 LINE、訂單、金流與客戶管理，適用寵物店、美業、健身房與瑜珈教室，協助中小型業者提升營運效率。
+                  tr
+                    td 關於我們
+                    td
+                      span.title-text 關於凱崴數位｜預約管理與LINE整合專家，打造智慧商務後台
+                    td
+                      span.description-text 凱崴數位專注開發預約管理與顧客經營系統，整合LINE官方帳號串接、銷售分析與多元模組，幫助業主輕鬆管理門市營運大小事。
+                  tr
+                    td 服務項目
+                    td
+                      span.title-text 凱崴數位｜多元產業預約管理系統，專為寵物、美業、健身與瑜珈打造
+                    td
+                      span.description-text 凱崴數位提供寵物店、美業、健身房與瑜珈教室等多產業預約管理系統，整合 LINE 串接、金流、排班與顧客資料，提升營運效率與顧客體驗。
+
+      // 第3頁：內容結構與語意標記
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 內容結構與語意標記（H1~H3）
+          .content-body.layout-full
+            .full-width-content
+              h2 檢查重點：
+              ul
+                li 有使用 H1~H3 標籤，但階層未明確、部分頁面重複 H1
+                li H2/H3 未結合服務關鍵字
+              h2 改善建議：
+              table.report-table
+                thead
+                  tr
+                    th 頁面
+                    th 建議 H1
+                    th 建議 H2/H3
+                tbody
+                  tr
+                    td 首頁
+                    td
+                      span.h1-text 凱崴數位雲端預約系統｜LINE 整合收款管理平台
+                    td
+                      span.h2h3-text 最強雲端管理系統 / 介面完整易操作，操作簡單,官網＋Line即時預約,多種金流付款方式最便利...
+                  tr
+                    td 關於我們
+                    td
+                      span.h1-text 關於凱崴數位｜專注預約管理與雲端系統開發
+                    td
+                      span.h2h3-text 凱崴數位的服務理念 / 01 專業、02 服務、03 熱忱
+                  tr
+                    td 服務項目
+                    td
+                      span.h1-text 最為您著想的電商平台，提供多業種服務
+                    td
+                      span.h2h3-text 寵物店管理系統 / 功能亮點
+
+      // 第4頁：網站速度分析
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 網站速度分析（Lighthouse 報告摘要）
+          .content-body.layout-full
+            .full-width-content
+              table.report-table.speed-analysis-table
+                thead
+                  tr
+                    th 項目
+                    th 手機端
+                    th 桌機端
+                    th 建議
+                tbody
+                  tr
+                    td FCP (首次呈現內容)
+                    td
+                      span.mobile-value 1.1s
+                    td
+                      span.desktop-value 0.3s
+                    td
+                      span.recommendation-text 非常優秀
+                  tr
+                    td LCP (最大內容載入時間)
+                    td
+                      span.mobile-value 1.7s
+                    td
+                      span.desktop-value 0.7s
+                    td
+                      span.recommendation-text 表現佳，圖片已適度壓縮
+                  tr
+                    td TBT (總阻塞時間)
+                    td
+                      span.mobile-value 180ms
+                    td
+                      span.desktop-value 0ms
+                    td
+                      span.recommendation-text 表現優秀，互動體驗良好
+                  tr
+                    td CLS (累積位移)
+                    td
+                      span.mobile-value 0.03
+                    td
+                      span.desktop-value 0.163
+                    td
+                      span.recommendation-text 桌機略高，建議控制元素跳動
+
+      // 第5頁：圖片與媒體最佳化
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 圖片與媒體最佳化
+          .content-body.layout-full
+            .full-width-content
+              h2 目前狀況
+              ul
+                li 多數圖片尺寸合理
+                li 缺少 ALT 說明
+                li 檔名通用(如:IMG1234.jpg),未結合服務關鍵字
+              h2 改善建議
+              ul
+                li 為所有圖像加上有意義的ALT描述,例如:「API金流串接流程示意圖」
+                li 圖片重新命名為語意清楚且包含品牌與關鍵字,如kaiwei-payment-gateway.png
+                li 對首頁 Hero 圖、服務圖示等設定 lazy load
+
+      // 第6頁：內部連結與結構建議
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 內部連結與結構建議
+          .content-body.layout-full
+            .full-width-content
+              h2 目前狀況
+              ul
+                li 主選單與頁腳無重複導引設計(未設 Footer)
+                li 無站內連結系統(如:從首頁連去 About 服務細節)
+              h2 建議對策
+              ul
+                li 新增全站 Footer,包含:快速連結、聯絡資訊、社群連結、Sitemap
+                li 加強服務內部連結(從首頁導去「金流串接」說明、案例、FAQ)
+                li 每頁加入明確 CTA (Call To Action) 例如「立即洽詢」「索取報價」
+
+      // 第7頁：技術面檢查
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 技術面檢查：Sitemap、Robots、GA
+          .content-body.layout-full
+            .full-width-content
+              table.report-table
+                thead
+                  tr
+                    th 項目
+                    th 狀態
+                    th 建議與做法
+                tbody
+                  tr
+                    td Sitemap.xml
+                    td
+                      span.status-text 無
+                    td
+                      span.suggestion-text 建議建立並提交至 Google Search Console
+                  tr
+                    td Robots.txt
+                    td
+                      span.status-text 無
+                    td
+                      span.suggestion-text 建立 robots.txt 檔案，規範爬蟲行為
+                  tr
+                    td Google Analytics
+                    td
+                      span.status-text 已安裝
+                    td
+                      span.suggestion-text 建議設定目標轉換追蹤與事件追蹤
+                  tr
+                    td Google Search Console
+                    td
+                      span.status-text 未驗證
+                    td
+                      span.suggestion-text 建議驗證網站所有權並提交 Sitemap
+
+      // 第8頁：總結與優化優先順序
+      .slide
+        .slide-content
+          .content-title
+            h1.slide-title 總結與優化優先順序
+          .content-body.layout-full
+            .full-width-content
+              h2 高優先 (建議立即處理)
+              ul
+                li 網站標題與描述重新撰寫 (每頁唯一且含關鍵字)
+                li 補上 sitemap.xml 與 robots.txt
+                li 所有圖片加 ALT 描述與語意檔名
+              h2 中優先 (第二階段進行)
+              ul
+                li 強化 H1~H3 結構階層
+                li 增加內頁文字內容與 FAQ
+                li 建立 Footer 區與內部導引系統
+
+    .progress-bar
+      .progress-fill#progressFill
+    .slide-navigation#slideNavigation
+
+  script(src="js/presentation.js")
+
+
