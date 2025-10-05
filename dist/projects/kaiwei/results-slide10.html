@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>標題與描述分析 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body class="results-page"><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1>內容建議 - 首頁,關於我們</h1></div><div class="content-body layout-full"><div class="full-width-content"><h2>首頁 </h2><ul><li>用戶見證：簡短客戶回饋語＋公司名稱</li><li>常見問題簡版（FAQ teaser）：前三個熱門問題＋連結到完整頁</li><li>底部 CTA：再次呼籲諮詢或加入 LINE</li><li>Footer：重複出現網站重要頁面的連結，避免跳離網站 </li></ul><h2>關於我們</h2><ul><li>品牌簡介 / 初衷：我們是誰、我們的使命是什麼</li><li>服務對象與專業範疇：強調專注於哪些產業、具備哪些解決經驗</li><li>核心優勢：專業、服務、熱忱（或效率、安全、彈性） </li></ul></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        }
+      });
+    }
+  }
+});</script></html>

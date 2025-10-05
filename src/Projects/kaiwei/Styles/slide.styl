@@ -358,6 +358,16 @@ html, body
       margin-bottom 0.5rem
       margin-left 1rem
 
+  // 限制全寬卡片內圖片尺寸（等比例、置中）
+  img
+    width auto
+    max-width 100%
+    height auto
+    max-height 390px
+    object-fit contain
+    display block
+    margin 0 auto
+
 
 .half-width-content
   width 65%
@@ -372,6 +382,9 @@ html, body
     font-weight 600
     color kaiwei-teal
     margin 0 0 .5rem 0
+  p
+    font-size .9rem
+    margin-bottom 1rem
   
   ul
     font-size 1rem
@@ -396,6 +409,31 @@ html, body
     object-fit cover
     display block
 
+// 圖片清單（成果截圖）
+.image-list
+  display grid
+  gap 1rem
+
+.image-item
+  display flex
+  flex-direction column
+  align-items center
+
+.image-item .caption
+  margin-top .5rem
+  font-size .9rem
+  color kaiwei-navy
+  text-align center
+
+// Results 頁面 h1 縮小（不影響 SEO 報告）
+@media (min-width: 769px)
+  body.results-page .content-title h1
+    font-size 1.5rem !important
+
+@media (max-width: 768px)
+  body.results-page .content-title h1
+    font-size 1rem !important
+
 // 兩欄並排時，讓右側（第二個）卡片背景透明
 .slide-content > .half-width-content + .half-width-content,
 .content-body > .half-width-content + .half-width-content
@@ -403,6 +441,14 @@ html, body
   box-shadow none !important
   padding 0 !important
   width 35% !important
+
+// 右側（第二個）半幅卡片內的圖片尺寸限制與置中
+.slide-content > .half-width-content + .half-width-content img,
+.content-body > .half-width-content + .half-width-content img 
+  width auto
+  height 390px
+  object-fit contain
+  display block
   
 
 // 健檢報告表格樣式

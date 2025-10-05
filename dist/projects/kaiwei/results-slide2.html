@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>標題與描述分析 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body class="results-page"><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1>Title 與 Meta Description  - 關於我們</h1></div><div class="content-body layout-full"><div class="half-width-content"><h2>Title 修改</h2><p>關於凱崴數位｜預約管理與LINE整合專家，打造智慧商務後台</p><h2>Meta Description 修改</h2><p>凱崴數位專注於開發預約管理與顧客經營系統，整合 LINE 官方帳號串接、線上預約、排班系統、銷售分析與多元模組，協助美業、美甲、健身房、瑜珈教室、寵物門市等服務業者，打造數位化營運流程。從顧客預約、金流整合到顧客關係維護，一站式解決門市日常管理問題，提升營運效率與顧客體驗。</p></div><div class="half-width-content"><img src="images/2.關於我們.png" alt="首頁：已調整 Title / Meta Description"></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        }
+      });
+    }
+  }
+});</script></html>

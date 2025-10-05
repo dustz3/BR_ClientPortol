@@ -338,6 +338,15 @@ body {
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
+.full-width-content img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 390px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 .half-width-content {
   width: 65%;
   background-color: #fff;
@@ -353,6 +362,10 @@ body {
   font-weight: 600;
   color: #1b9c85;
   margin: 0 0 0.5rem 0;
+}
+.half-width-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 .half-width-content ul {
   font-size: 1rem;
@@ -377,12 +390,44 @@ body {
   object-fit: cover;
   display: block;
 }
+.image-list {
+  display: grid;
+  gap: 1rem;
+}
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-item .caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #34495e;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  body.results-page .content-title h1 {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  body.results-page .content-title h1 {
+    font-size: 1rem !important;
+  }
+}
 .slide-content > .half-width-content + .half-width-content,
 .content-body > .half-width-content + .half-width-content {
   background: transparent !important;
   box-shadow: none !important;
   padding: 0 !important;
   width: 35% !important;
+}
+.slide-content > .half-width-content + .half-width-content img,
+.content-body > .half-width-content + .half-width-content img {
+  width: auto;
+  height: 390px;
+  object-fit: contain;
+  display: block;
 }
 .report-table-container {
   width: 100%;

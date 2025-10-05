@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>標題與描述分析 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body class="results-page"><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1>Heading 結構優化（H1~H3） - 首頁</h1></div><div class="content-body layout-full"><div class="half-width-content"><h2>H1</h2><p>凱崴數位雲端預約系統｜LINE 整合收款管理平台​</p><h2>H2</h2><ul><li>最強雲端管理系統</li><li>即時預約系統，訂單自動接進來</li><li>經營最佳幫手，一台平板通通搞定</li><li>輕鬆排班管理，高效率掌握行程</li><li>獨立金流，收款不再轉一手</li></ul><h2>H3</h2><ul><li>介面完整整易懂，操作簡單</li><li>官網＋Line即時預約</li><li>多種儲值付款方式最便利</li></ul></div><div class="half-width-content"><img src="images/5.首頁.png" alt=" "></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        }
+      });
+    }
+  }
+});</script></html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>標題與描述分析 - 品耀數位行銷</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/slide.css"></head><body class="results-page"><div class="presentation-container"><div class="slide"><div class="slide-content"><div class="content-title"><h1>Heading 結構優化（H1~H3） - 關於我們</h1></div><div class="content-body layout-full"><div class="half-width-content"><h2>H1</h2><p>凱崴數位的服務理念​</p><h2>H2</h2><ul><li>凱崴數位的服務理念</li><li>三大服務核心價值</li><li>關於我們</li><li>公司願景</li><li>凱崴數位聯繫方式</li><li>歡迎加入我們官方LINE</li></ul><h2>H3</h2><ul><li>專業</li><li>服務</li><li>熱忱</li></ul></div><div class="half-width-content"><img src="images/6.關於我們.png" alt=" "></div></div></div></div></div></body><script>// 佈局切換功能
+document.addEventListener('DOMContentLoaded', function() {
+  // 只在桌面版顯示佈局切換功能
+  if (window.innerWidth > 768) {
+    const splitLayout = document.querySelector('.layout-split');
+    const fullLayout = document.querySelector('.layout-full');
+
+    if (splitLayout) splitLayout.style.display = 'none';
+    if (fullLayout) fullLayout.style.display = 'flex';
+
+    // 添加標題點擊功能
+    const title = document.querySelector('.content-title h1');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.title = '點擊切換佈局';
+      title.addEventListener('click', function() {
+        if (splitLayout.style.display === 'flex') {
+          splitLayout.style.display = 'none';
+          fullLayout.style.display = 'flex';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        } else {
+          splitLayout.style.display = 'flex';
+          fullLayout.style.display = 'none';
+          title.textContent = '標題與描述分析（Meta Tags）';
+        }
+      });
+    }
+  }
+});</script></html>
