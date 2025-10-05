@@ -153,6 +153,9 @@ body {
   height: 100vh;
   position: relative;
 }
+.layout-cover .content-title h1 {
+  color: #000 !important;
+}
 .slide {
   height: 100vh;
   width: 100vw;
