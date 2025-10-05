@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx http-server dist -p 3000 -o",
     "build": "npm run build:static",
-    "build:static": "npm run build:base && xcopy \"dist\\_redirects\" \"dist\\\" /Y 2>nul || echo 'redirects file already exists'",
+    "build:static": "npm run build:base",
     "build:base": "npm run build:dashboard:pug && npm run build:dashboard:css && npm run build:dashboard:js && npm run build:dashboard:assets",
     "build:socialpost:pug": "mkdir dist\\projects\\socialPostAssets 2>nul && npx pug \"src/Projects/socialPostAssets/Templates/0917.pug\" -o dist/projects/socialPostAssets/ && npx pug \"src/Projects/socialPostAssets/Templates/permission-matrix.pug\" -o dist/projects/socialPostAssets/",
     "build:socialpost:css": "mkdir dist\\projects\\socialPostAssets\\css 2>nul && npx stylus \"src/Projects/socialPostAssets/Styles/main.styl\" -o dist/projects/socialPostAssets/css/",
@@ -16,7 +16,7 @@
     "build:dashboard:pug": "npx pug \"src/Projects/BrandRizeClientLogIn/Templates/index.pug\" -o dist/",
     "build:dashboard:css": "npx stylus \"src/Projects/BrandRizeClientLogIn/Styles/login.styl\" -o dist/css/",
     "build:dashboard:js": "npx browserify \"src/Projects/BrandRizeClientLogIn/Javascript/login.js\" -o dist/js/login.js",
-    "build:dashboard:assets": "xcopy \"src\\Projects\\BrandRizeClientLogIn\\Assets\\*\" \"dist\\images\\\" /Y",
+    "build:dashboard:assets": "cpx \"src/Projects/BrandRizeClientLogIn/Assets/**/*\" dist/images/",
     "build:css": "npx stylus src/styles/main.styl -o dist/css/",
     "build:js": "npx browserify src/js/main.js -o dist/js/bundle.js",
     "watch": "npm run watch:css & npm run watch:js",
@@ -59,6 +59,7 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^17.0.0",
+    "cpx": "^1.5.0",
     "gh-pages": "^6.0.0",
     "http-server": "^14.1.1",
     "pug": "^3.0.3",
