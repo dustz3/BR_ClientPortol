@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../website_wireframe"
+    },
+    {
+      "path": "../Final_Release"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "website_wireframe",
+    "liveServer.settings.port": 5501
+  }
+}
