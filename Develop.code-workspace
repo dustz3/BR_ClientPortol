@@ -1,12 +1,15 @@
 {
   "folders": [
     {
+      "name": "BR_ClientPortol",
       "path": "."
     },
     {
+      "name": "website_wireframe",
       "path": "../website_wireframe"
     },
     {
+      "name": "Final_Release",
       "path": "../Final_Release"
     }
   ],
