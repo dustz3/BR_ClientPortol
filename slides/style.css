@@ -55,7 +55,11 @@ body {
   color: var(--accent-color);
   margin: 0 0 1.4rem;
   letter-spacing: 0.12rem;
-  white-space: nowrap;
+}
+
+.cover-title-secondary {
+  display: block;
+  margin-top: 0.4rem;
 }
 
 .cover-subtitle {
@@ -115,16 +119,43 @@ body {
   margin-bottom: 2.2rem;
 }
 
+.content-block.plain .block-text {
+  font-size: 1.35rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.content-block.plain ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.content-block.note {
+  background: rgba(14, 30, 43, 0.55);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.2rem 1.6rem;
+  margin-top: 0.8rem;
+  border-radius: 12px;
+}
+
 .block-heading {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 1rem;
 }
 
+.content-block.note .block-heading {
+  margin-bottom: 0.6rem;
+}
+
 .reveal ul {
   margin: 0;
   padding-left: 1.6rem;
   list-style-type: disc;
+}
+
+.content-block.note ul {
+  padding-left: 1.2rem;
 }
 
 .reveal li {
@@ -159,6 +190,11 @@ body {
 
   .reveal li {
     font-size: 1.2rem;
+  }
+
+  .content-block.note {
+    padding: 1rem 1.2rem;
+    margin-top: 0.6rem;
   }
 
   .cover-content {

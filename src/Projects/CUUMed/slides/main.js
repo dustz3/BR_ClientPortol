@@ -6,7 +6,8 @@ import logoUrl from './assets/brandrize-logo.svg';
 const slidesData = [
   {
     type: 'cover',
-    title: '峻程科技 SEO 維運現況簡報',
+    title:
+      '峻程科技<br /><span class="cover-title-secondary">網站 SEO 維運現況簡報</span>',
     subtitle: '品耀數位行銷｜讓品牌發光，價值躍升',
     presenter: '報告人：Aaron, Aries',
     logo: logoUrl,
@@ -15,113 +16,123 @@ const slidesData = [
     title: '現行服務內容的整體結構',
     sections: [
       {
-        heading: '整體說明',
-        bullets: ['依據目前提供之服務內容，可區分為兩大類型：'],
+        heading: '目前使用中的服務內容，可明確分為兩個層級：',
+        type: 'plain',
+        text: `一、關鍵字行銷（SEO）相關作業<br />二、網站與主機的日常維護管理`,
       },
       {
-        heading: '一、關鍵字行銷（SEO）相關服務',
+        heading: '重點：',
         bullets: [
-          '關鍵字操作：排名維持、評估選擇與網站配置',
-          '維運追蹤：定期排名報表與搜尋引擎／語言設定',
-        ],
-      },
-      {
-        heading: '二、網站與主機維護管理',
-        bullets: [
-          '主機租用與安全設定（含 HTTPS）',
-          '專人監控、資安與備份維護',
+          'SEO 著重搜尋結構與關鍵字配置',
+          '主機維護作為網站穩定運作的基礎支撐',
         ],
       },
     ],
   },
   {
-    title: '關鍵字行銷在服務中的角色定位',
+    title: '關鍵字行銷的角色定位',
     sections: [
       {
-        heading: '在現行服務結構中的定位',
+        heading: '在整體服務中，SEO 扮演基礎維運角色：',
         bullets: [
-          '屬於基礎型 SEO 與搜尋結構維運',
-          '著重於關鍵字設定、配置與排名追蹤',
-          '主要目標為維持搜尋能見度與結構穩定',
+          '關鍵字設定與基本配置',
+          '排名狀態的持續追蹤',
+          '搜尋結構的穩定維持',
         ],
       },
       {
-        heading: '角色理解',
-        bullets: ['作為網站營運的基礎支撐層', '非短期成效或行銷成長導向'],
+        heading: '目標導向',
+        bullets: ['非短期成效或行銷成長導向', '以穩定為目標'],
       },
     ],
   },
   {
-    title: '現行 SEO 服務的操作層級',
+    title: '現行 SEO 的操作層級',
     sections: [
       {
-        heading: '目前可觀察到的主要操作層級',
+        heading: '目前實際執行的工作，集中於以下層級：',
         bullets: [
-          '關鍵字設定與基礎配置',
-          'On-page SEO 與技術結構調整',
-          '關鍵字排名追蹤與狀態回報',
-          '網站與主機環境的日常維運',
+          '關鍵字設定與 On-page SEO',
+          '技術結構與基礎環境維護',
+          '排名追蹤與狀態回報',
         ],
       },
       {
-        heading: '操作特性說明',
-        bullets: ['以設定、維護與追蹤為主要工作型態', '著重於既有架構的穩定運作'],
+        heading: '目標',
+        type: 'plain',
+        text: `維持既有架構正常運作`,
       },
     ],
   },
   {
-    title: '既有操作模式下的常見結果',
+    title: '既有操作下的結果樣態',
     sections: [
       {
-        heading: '在目前操作層級下，通常會出現的情況',
+        heading: '在目前操作層級下，常見的搜尋表現為：',
         bullets: [
-          '搜尋排名以維持現況為主',
-          '排名變動多作狀態觀察與紀錄',
-          '關鍵字調整未必立刻帶動成效',
-          '搜尋能見度變化通常緩慢穩定',
+          '排名大致維持既有位置',
+          '變動多作為狀態觀察',
+          '能見度成長幅度有限',
         ],
       },
       {
-        heading: '理解重點',
-        bullets: ['此類結果與操作層級高度相關', '若期待不同結果，通常需搭配不同層級的規劃'],
+        heading: '結果：',
+        type: 'plain',
+        text: `結果與投入層級呈現高度對應`,
       },
     ],
   },
   {
-    title: '決策思考與判斷方向',
+    title: '服務使用邊界與理解',
     sections: [
       {
-        heading: '在既有 SEO 基礎下，可進一步評估的關鍵問題',
+        heading: '在理解既有 SEO 維運服務時，需一併釐清：',
         bullets: [
-          '目前的 SEO 投入，是否已足以支撐公司現階段的業務目標？',
-          '目前追蹤的關鍵字與排名變化，是否對實際決策產生影響？',
-          '若維持現行操作層級，是否符合對搜尋能見度的期待？',
+          '此類服務通常不承諾特定排名或流量成效',
+          '關鍵字調整本身，未必直接帶來搜尋成長',
+          '能排名報表多為狀態回報，未必包含策略建議',
         ],
       },
       {
-        heading: '決策層思考方向',
-        bullets: ['維持現行操作層級，作為穩定基礎', '或評估是否需要調整投入層級與策略方向'],
+        heading: '提醒：',
+        type: 'plain',
+        text: `若要成長，必須另增策略層投入；否則只能接受「維持不退」的合理結果。`,
       },
     ],
   },
   {
-    title: '會議決議與後續方向',
+    title: '決策思考',
     sections: [
       {
-        heading: '本次會議可先行確認的事項',
+        heading: '在既有 SEO 基礎下，可進一步思考：',
         bullets: [
-          '目前的 SEO 操作層級，是否符合公司現階段的需求與目標？',
-          '現行服務定位，是否作為「穩定基礎」持續維持？',
-          '是否需要進一步評估不同投入層級或策略選項？',
+          '目前投入是否符合階段性目標？',
+          '排名追蹤是否實際支援決策？',
+          '是否需要不同層級的策略投入？',
         ],
       },
       {
-        heading: '會議後續行動方向（擇一或多項）',
+        heading: '重點：',
+        type: 'plain',
+        text: `核心在於「定位選擇」`,
+      },
+    ],
+  },
+  {
+    title: '決議與後續方向',
+    sections: [
+      {
+        heading: '本次會議可先確認：',
         bullets: [
-          '維持現行操作模式，定期檢視其適切性',
-          '進一步盤點內部期待與可投入資源',
-          '另行安排討論，評估調整方向與時程',
+          '是否維持現行操作層級？',
+          '是否作為穩定基礎持續運作？',
+          '是否另行評估調整可能性？',
         ],
+      },
+      {
+        heading: '後續：',
+        type: 'plain',
+        text: `可依決議安排下一步討論`,
       },
     ],
   },
@@ -168,14 +179,20 @@ slidesContainer.innerHTML = slidesData
         <h2>${title}</h2>
         ${sections
           .map(
-            ({ heading, bullets }) => `
-              <div class="content-block">
+            ({ heading, bullets, type, text }) => `
+              <div class="content-block${type === 'note' ? ' note' : ''}${
+              type === 'plain' ? ' plain' : ''
+            }">
                 <p class="block-heading">${heading}</p>
-                <ul>
-                  ${bullets.map((item) => `<li>${item}</li>`).join('')}
-                </ul>
+                ${
+                  type === 'plain' && text
+                    ? `<p class="block-text">${text}</p>`
+                    : `<ul>${bullets
+                        .map((item) => `<li>${item}</li>`)
+                        .join('')}</ul>`
+                }
               </div>
-            `,
+            `
           )
           .join('')}
       </section>

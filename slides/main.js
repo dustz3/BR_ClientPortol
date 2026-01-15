@@ -6,7 +6,7 @@ import logoUrl from './assets/brandrize-logo.svg';
 const slidesData = [
   {
     type: 'cover',
-    title: '峻程科技 SEO 維運現況簡報',
+    title: '峻程科技<br /><span class="cover-title-secondary">網站 SEO 維運現況簡報</span>',
     subtitle: '品耀數位行銷｜讓品牌發光，價值躍升',
     presenter: '報告人：Aaron, Aries',
     logo: logoUrl,
@@ -15,21 +15,15 @@ const slidesData = [
     title: '現行服務內容的整體結構',
     sections: [
       {
-        heading: '整體說明',
-        bullets: ['依據目前提供之服務內容，可區分為兩大類型：'],
+        heading: '目前使用中的服務內容，可明確分為兩個層級：',
+        type: 'plain',
+        text: `一、關鍵字行銷（SEO）相關作業<br />二、網站與主機的日常維護管理`,
       },
       {
-        heading: '一、關鍵字行銷（SEO）相關服務',
+        heading: '重點：',
         bullets: [
-          '關鍵字操作：排名維持、評估選擇與網站配置',
-          '維運追蹤：定期排名報表與搜尋引擎／語言設定',
-        ],
-      },
-      {
-        heading: '二、網站與主機維護管理',
-        bullets: [
-          '主機租用與安全設定（含 HTTPS）',
-          '專人監控、資安與備份維護',
+          'SEO 著重搜尋結構與關鍵字配置',
+          '主機維護作為網站穩定運作的基礎支撐',
         ],
       },
     ],
@@ -168,12 +162,14 @@ slidesContainer.innerHTML = slidesData
         <h2>${title}</h2>
         ${sections
           .map(
-            ({ heading, bullets }) => `
-              <div class="content-block">
+            ({ heading, bullets, type, text }) => `
+              <div class="content-block${type === 'note' ? ' note' : ''}${type === 'plain' ? ' plain' : ''}">
                 <p class="block-heading">${heading}</p>
-                <ul>
-                  ${bullets.map((item) => `<li>${item}</li>`).join('')}
-                </ul>
+                ${
+                  type === 'plain' && text
+                    ? `<p class="block-text">${text}</p>`
+                    : `<ul>${bullets.map((item) => `<li>${item}</li>`).join('')}</ul>`
+                }
               </div>
             `,
           )
