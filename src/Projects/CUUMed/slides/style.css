@@ -77,6 +77,35 @@ body {
   letter-spacing: 0.06rem;
 }
 
+.closing-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: none !important;
+}
+
+.closing-content {
+  text-align: center;
+  padding: 3rem 3.2rem;
+  background: var(--panel-color);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.closing-title {
+  font-size: clamp(2.4rem, 4vw + 1rem, 3.2rem);
+  margin: 0 0 1.2rem;
+  color: var(--accent-color);
+  letter-spacing: 0.1rem;
+}
+
+.closing-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+  margin: 0;
+  letter-spacing: 0.08rem;
+}
+
 .reveal h2 {
   font-size: 3.2rem;
   margin: 0 0 2.2rem;
@@ -157,5 +186,17 @@ body {
 
   .cover-presenter {
     font-size: 1rem;
+  }
+
+  .closing-content {
+    padding: 2.4rem 2.6rem;
+  }
+
+  .closing-title {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+  }
+
+  .closing-subtitle {
+    font-size: 1.05rem;
   }
 }

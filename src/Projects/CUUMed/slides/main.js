@@ -125,6 +125,11 @@ const slidesData = [
       },
     ],
   },
+  {
+    type: 'closing',
+    title: '感謝您的時間與指教',
+    subtitle: '品耀數位行銷　敬上',
+  },
 ];
 
 const slidesContainer = document.querySelector('.slides');
@@ -140,6 +145,18 @@ slidesContainer.innerHTML = slidesData
             <h1>${title}</h1>
             <p class="cover-subtitle">${subtitle}</p>
             <p class="cover-presenter">${presenter}</p>
+          </div>
+        </section>
+      `;
+    }
+
+    if (slide.type === 'closing') {
+      const { title, subtitle } = slide;
+      return `
+        <section class="closing-slide">
+          <div class="closing-content">
+            <h2 class="closing-title">${title}</h2>
+            <p class="closing-subtitle">${subtitle}</p>
           </div>
         </section>
       `;
