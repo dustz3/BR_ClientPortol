@@ -1,0 +1,154 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #1f3a93;
+  --content-width: 90%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.reveal {
+  background-color: var(--bg-color);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 2.5rem 3.5rem;
+  width: var(--content-width);
+  max-width: 1080px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cover-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: none !important;
+  padding: 0 !important;
+}
+
+.cover-content {
+  text-align: center;
+  padding: 3.5rem 4rem;
+  background: rgba(14, 30, 43, 0.65);
+  border-radius: 22px;
+  backdrop-filter: blur(8px);
+}
+
+.cover-logo {
+  width: 180px;
+  max-width: 50vw;
+  margin-bottom: 2rem;
+}
+
+.cover-content h1 {
+  font-size: clamp(2.6rem, 4vw + 1rem, 3.6rem);
+  color: var(--accent-color);
+  margin: 0 0 1.4rem;
+  letter-spacing: 0.12rem;
+  white-space: nowrap;
+}
+
+.cover-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+  letter-spacing: 0.08rem;
+}
+
+.cover-presenter {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin: 1.2rem 0 0;
+  letter-spacing: 0.06rem;
+}
+
+.reveal h2 {
+  font-size: 3.2rem;
+  color: var(--accent-color);
+  margin: 0 0 2rem;
+  letter-spacing: 0.08rem;
+}
+
+.content-block {
+  margin-bottom: 2.2rem;
+}
+
+.block-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.reveal ul {
+  margin: 0;
+  padding-left: 1.6rem;
+  list-style-type: disc;
+}
+
+.reveal li {
+  font-size: 1.35rem;
+  line-height: 1.75;
+  margin-bottom: 0.6rem;
+}
+
+.reveal .controls {
+  color: var(--accent-color);
+}
+
+.reveal .slide-number {
+  background: rgba(31, 58, 147, 0.85);
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.3rem 0.8rem;
+}
+
+@media (max-width: 960px) {
+  .reveal .slides section {
+    padding: 2rem;
+  }
+
+  .reveal h2 {
+    font-size: 2.4rem;
+  }
+
+  .block-heading {
+    font-size: 1.4rem;
+  }
+
+  .reveal li {
+    font-size: 1.2rem;
+  }
+
+  .cover-content {
+    padding: 2.4rem 2.6rem;
+  }
+
+  .cover-content h1 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+  }
+
+  .cover-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .cover-logo {
+    width: 140px;
+    margin-bottom: 1.6rem;
+  }
+
+  .cover-presenter {
+    font-size: 1rem;
+  }
+}
