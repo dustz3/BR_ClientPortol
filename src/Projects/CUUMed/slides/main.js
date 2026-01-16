@@ -2,6 +2,7 @@ import Reveal from 'reveal.js';
 import 'reveal.js/dist/reveal.css';
 import './style.css';
 import logoUrl from './assets/brandrize-logo.svg';
+import serviceImg from './assets/service.jpg';
 
 const slidesData = [
   {
@@ -14,6 +15,7 @@ const slidesData = [
   },
   {
     title: '現行服務內容的整體結構',
+    image: serviceImg,
     sections: [
       {
         heading: '目前使用中的服務內容，可明確分為兩個層級：',
@@ -173,28 +175,46 @@ slidesContainer.innerHTML = slidesData
       `;
     }
 
-    const { title, sections } = slide;
+    const { title, sections, image } = slide;
+    const blocks = sections
+      .map(
+        ({ heading, bullets, type, text }) => `
+          <div class="content-block${type === 'note' ? ' note' : ''}${
+          type === 'plain' ? ' plain' : ''
+        }">
+            <p class="block-heading">${heading}</p>
+            ${
+              type === 'plain' && text
+                ? `<p class="block-text">${text}</p>`
+                : `<ul>${bullets
+                    .map((item) => `<li>${item}</li>`)
+                    .join('')}</ul>`
+            }
+          </div>
+        `
+      )
+      .join('');
+
+    if (image) {
+      return `
+        <section class="slide-with-image">
+          <h2>${title}</h2>
+          <div class="slide-content">
+            <div class="slide-body">
+              ${blocks}
+            </div>
+            <div class="slide-media">
+              <img class="slide-image" src="${image}" alt="服務內容示意" />
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
     return `
       <section>
         <h2>${title}</h2>
-        ${sections
-          .map(
-            ({ heading, bullets, type, text }) => `
-              <div class="content-block${type === 'note' ? ' note' : ''}${
-              type === 'plain' ? ' plain' : ''
-            }">
-                <p class="block-heading">${heading}</p>
-                ${
-                  type === 'plain' && text
-                    ? `<p class="block-text">${text}</p>`
-                    : `<ul>${bullets
-                        .map((item) => `<li>${item}</li>`)
-                        .join('')}</ul>`
-                }
-              </div>
-            `
-          )
-          .join('')}
+        ${blocks}
       </section>
     `;
   })
